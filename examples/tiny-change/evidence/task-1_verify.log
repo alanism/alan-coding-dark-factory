@@ -1,0 +1,3 @@
+$ cat config.txt
+harmless_key=harmless_value
+Verification result: PASS

@@ -1,0 +1,16 @@
+{
+  "changeId": "tiny-change",
+  "title": "Tiny demonstration change",
+  "stage": 8,
+  "tasks": [
+    {
+      "id": "task-1",
+      "description": "Implement harmless configuration change",
+      "status": "DONE",
+      "dependencies": [],
+      "allowed_files": ["config.txt"],
+      "forbidden_files": ["secret.txt"],
+      "binary_gate": "cat config.txt"
+    }
+  ]
+}

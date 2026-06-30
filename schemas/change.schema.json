@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ACDF Change Metadata Schema",
+  "type": "object",
+  "properties": {
+    "changeId": {
+      "type": "string",
+      "pattern": "^[a-z0-9-_]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "stage": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 8
+    },
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^task-[0-9]+$"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": ["TODO", "IN_PROGRESS", "DONE", "BLOCKED"]
+          },
+          "dependencies": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowed_files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "forbidden_files": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "binary_gate": {
+            "type": "string"
+          }
+        },
+        "required": ["id", "description", "status", "dependencies", "allowed_files", "forbidden_files", "binary_gate"]
+      }
+    }
+  },
+  "required": ["changeId", "title", "stage", "tasks"]
+}

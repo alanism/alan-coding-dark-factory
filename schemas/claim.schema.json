@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ACDF Task Claim Schema",
+  "type": "object",
+  "properties": {
+    "taskId": {
+      "type": "string",
+      "pattern": "^task-[0-9]+$"
+    },
+    "agentId": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "heartbeat": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": ["taskId", "agentId", "timestamp", "heartbeat"]
+}

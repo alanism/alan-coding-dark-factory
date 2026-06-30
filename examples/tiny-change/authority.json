@@ -1,0 +1,14 @@
+{
+  "changeName": "tiny-change",
+  "timestamp": "2026-06-30T16:00:00Z",
+  "snapshots": {
+    "proposal.md": "a8f3b2cd7810e4a9019b88234ff12aef893a02bb8cde23d0d860e909a871fe2a",
+    "design.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tasks.md": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+  },
+  "write_rules": {
+    "allowed_files": ["config.txt"],
+    "forbidden_files": ["secret.txt"]
+  },
+  "graph_checksum": "abc123def456"
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ACDF State-Log Event Schema",
+  "type": "object",
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "taskId": {
+      "type": "string",
+      "pattern": "^task-[0-9]+$"
+    },
+    "agentId": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string",
+      "enum": ["CLAIMED", "RELEASED", "COMPLETED", "BLOCKED"]
+    },
+    "details": {
+      "type": "string"
+    }
+  },
+  "required": ["timestamp", "taskId", "agentId", "action"]
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ACDF Authority Snapshot Schema",
+  "type": "object",
+  "properties": {
+    "changeName": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "snapshots": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{64}$"
+      }
+    },
+    "write_rules": {
+      "type": "object",
+      "properties": {
+        "allowed_files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "forbidden_files": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["allowed_files", "forbidden_files"]
+    },
+    "graph_checksum": {
+      "type": "string"
+    }
+  },
+  "required": ["changeName", "timestamp", "snapshots", "write_rules", "graph_checksum"]
+}
