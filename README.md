@@ -1,68 +1,39 @@
 # Alan Coding Dark Factory (ACDF) v8
 
-## An AI Engineering Operating System for Governing Autonomous Development
+## An AI Engineering Operating System for Governed Software Development
 
-Alan Coding Dark Factory (ACDF) is an open-source engineering operating system designed to govern, constrain, and optimize autonomous software development. It provides the structured boundaries, content-hashed snapshots, and binary gates necessary to coordinate frontier AI models safely across complex, real-world codebases.
+Alan Coding Dark Factory (ACDF) is an autonomous, sequential, and gate-governed AI engineering operating system. ACDF does not compile code in a vacuum; it acts as a deterministic execution container that enforces architectural constraints, content-hashed snapshots, and continuous learning feedback loops.
 
-ACDF is **not** an autocomplete assistant. It is a deterministic execution container that enforces software quality, containment, and continuous organizational learning.
-
----
-
-## 1. Why ACDF Exists
-
-Software engineering is a sequence of decisions, not just a stream of characters. 
-
-The widespread adoption of generative AI has made code synthesis cheap, but it has made engineering judgment, specification precision, and codebase safety scarce. Vague natural language instructions given directly to LLMs often result in speculative abstractions, scope sprawl, hidden technical debt, and regressions.
-
-ACDF exists to transition AI engineering from a model of **unconstrained code generation** to a model of **governed execution**. It bounds AI agency within strict contracts, ensuring that all code modifications are structurally justified, rigorously modeled, adversarially reviewed, and programmatically verified before they are committed to the codebase.
+```mermaid
+flowchart LR
+    Idea([Idea]) --> Model[Model Stage 0.5]
+    Model --> Reference[Reference Stage 1]
+    Reference --> Authority[Authority Stage 4]
+    Authority --> Execute[Execute Stage 5]
+    Execute --> Verify[Verify Stage 6]
+    Verify --> Learn[Learn Stage 8]
+```
 
 ---
 
-## 2. Core Philosophy
+## 1. Why Now? The Bottleneck Has Shifted
 
-ACDF is built on the following axioms:
+Generative AI has commoditized code synthesis. Modern frontier models can now generate code faster than humans can verify it. 
 
-* **Authority over Ambiguity**: If a detail is missing from the project's specification contract, execution stops. Agents are forbidden from guessing.
-* **Evidence over Assumptions**: Code is only correct when empirical verification logs (compilers, test suites, E2E runners) prove it. Vibes-based assertions are rejected.
-* **Gates over Self-Assessment**: Agents cannot self-certify completion. Done is declared solely by deterministic verification exit codes.
-* **Receipts over Chat Memory**: Chat history is volatile context. Decisional proof is written to version-controlled receipts containing root-cause analyses and static preventions.
-* **Runtime Truth over Planning Confidence**: A pristine plan that fails to compile is a failure. Empiricism and runtime metrics override planning confidence.
-* **Continuous Learning over Repeated Failure**: Systemic failures must compound into future security, compiler, or linter rules to statically prevent their recurrence.
+As a result, the bottleneck in software development has fundamentally shifted:
+* **The scarce resource is no longer tokens**; it is **engineering judgment, verification, and runtime truth**.
+* Without strict boundaries, AI coding assistants introduce hidden regression risks, structural drift, and spec hallucinations.
+* Relying purely on natural language prompts leads to inconsistent codebase architectures and repeated bugs.
 
----
-
-## 3. Why ACDF is Different
-
-Unlike ordinary AI coding assistants that edit files directly from a chat window, ACDF introduces a structured protocol kernel:
-
-| Dimension | Ordinary AI Coding Assistants | Alan Coding Dark Factory (ACDF) |
-|---|---|---|
-| **Write Scope** | Can modify any file in the workspace | Locked strictly to whitelisted files in `authority.json` |
-| **Specifications** | Relies on fuzzy instructions in chat logs | Governed by a centralized, explicit `REFERENCE_GUIDE.md` |
-| **Planning** | Generates code immediately | Enforces sequential gates (Stage 0 -> Stage 8) |
-| **Orchestration** | Single-model generation | Multi-model review, planning, and verification |
-| **Organizational Memory** | Discards chat logs after closing session | Codifies learning cards back into active project rules |
-| **Diagrams & Models** | documentation artifacts | Executable mental models driving gates and tasks |
+ACDF exists because the engineering bottleneck has changed. ACDF separates the **reasoning prior** (the expert knowledge) from the **operating protocol** (the gated container), ensuring that AI agents operate safely within whitelisted boundaries.
 
 ---
 
-## 4. Multi-Model Engineering Workflows
+## 2. Hero Lenses: Evolving Engineering Doctrines
 
-Modern frontier models possess different reasoning strengths, latency profiles, and context-window capabilities. Betting on a single model to handle the entire software lifecycle introduces vulnerabilities.
+The flagship innovation of ACDF is the **Hero Lens**—a living engineering knowledge module synthesized from curated expert engineering corpora. 
 
-ACDF orchestrates multiple frontier models to perform specialized engineering roles:
-1. **Planning & Task Decomposition**: High-reasoning models compile specifications and trace topological task dependencies.
-2. **Adversarial Review**: Critic models challenge proposed architectures and schemas.
-3. **Implementation**: Surgical coding agents execute minimal diffs within whitelisted files.
-4. **Verification**: Specialized testing agents execute compile loops, lint checkers, and E2E E2E runners.
-
-This multi-model orchestration approximates the workflow benefits of a **Mixture-of-Experts (MoE) engineering pipeline**—allocating specialized tasks to models optimized for those specific roles—without requiring custom model training or specialized inference infrastructure.
-
----
-
-## 5. Hero Lenses: Living Knowledge Modules
-
-One of ACDF’s primary innovations is the **Hero Lens**—a living engineering knowledge module synthesized from curated expert engineering sources (papers, lectures, codebase audits, and technical debates).
+A Hero Lens is **not** a prompt persona, and it is **not** role-playing. It is a structured engineering doctrine.
 
 ```text
 Books, Talks, Podcasts, Conference presentations, Interviews, Papers, Tweets, GitHub discussions
@@ -89,87 +60,108 @@ Books, Talks, Podcasts, Conference presentations, Interviews, Papers, Tweets, Gi
                                    Hero Lens
 ```
 
-### Living Knowledge Ingestion
-* **Not Personas**: Lenses do not role-play. They are highly structured technical doctrines.
-* **NotebookLM Integration**: Each lens is backed by an ingestion corpus of expert literature. As new industry standards, security vulnerabilities, or frameworks emerge, the corpus is refreshed, updating the lens heuristics without modifying ACDF itself.
-* **Stage 3 Model Critique**: Lenses challenge sequence mappings, state transitions, and schemas before coding starts.
-* **Advisory Governance Bounds**: *“Hero Lenses may propose risks, questions, test ideas, and implementation heuristics. They cannot grant authority, expand scope, waive gates, override user instructions, or justify touching forbidden files.”*
+### The Ingestion Pipeline
+Each lens is backed by its own maintained NotebookLM corpus of an expert's published work. As technical practices, database designs, or security patterns evolve, the NotebookLM is updated. The Hero Lens doctrine improves over time without modifying the underlying ACDF operating system.
+
+### Stage 3 Model Challenge
+Lenses are used in Stage 3 (Adversarial Review) to challenge system designs, sequence limits, and database boundaries:
+* **Lopopolo (Harness Master)**: Challenges AST constraints, compile loops, and enforces sub-minute test cycles.
+* **Cherny (Type-Driven Orchestrator)**: Challenges interface types, options layouts, and checklist decomposition.
+* **Willison (Agentic Architect)**: Challenges API integration mockings and pushes forcontained Docker sandboxes.
+* **Hashimoto (Hammer Maker)**: Challenges developer environments, scripting usability, and setup scripts.
+* **Taylor (Product Machine Builder)**: Assures user outcomes and prevents agent reward-hacking (e.g. deleting test lines).
+* **Carlini (Adversarial Reductionist)**: Challenges data boundaries, prompt inputs, and security trust zones.
+* **Schaad (Temporal Craftsman)**: Assures UI state coverage (Loading, Empty, Success, Warning, Error, Recovery).
+* **Wood (Protocol Primitive Architect)**: Challenges multi-actor transaction constraints and invariant logic.
+* **Karpathy (Micro-Loop Engineer)**: Enforces surgical code changes and minimal diff statistics.
+* **Carmack (Runtime Truth Engineer)**: Assures runtime metrics, console trace outputs, and burn-in testing.
 
 ---
 
-## 6. Human-in-the-Loop Responsibilities
+## 3. Multi-Model Orchestration (Approximate MoE Workflow)
 
-ACDF does not aim for complete, unattended autonomy. Instead, it positions the human developer as the **governing authority** who owns critical judgment paths, while agents act as executors within bounded scopes:
+ACDF intentionally orchestrates multiple frontier models to perform different engineering roles:
+* **High-Reasoning Models**: Allocated to planning, task decomposition, and sequence modeling.
+* **Critique Models**: Allocated to adversarial reviews and design validation.
+* **Fast-Inference Coding Models**: Allocated to Stage 5 implementation.
+* **Deterministic Compiler/Test Engines**: Validate binary gates.
 
-* **Curating Knowledge**: Humans curate the NotebookLM ingestion sources for Hero Lenses.
-* **Defining Correctness**: Humans define the project's success metrics, Job-to-be-Done (JTBD), and active trust zones.
-* **Obtaining Approval**: Agents must pause and wait for explicit human approval before transitioning from planning (Stage 2/3) to execution (Stage 4).
-* **Reviewing Conflicts**: When adversarial reviews flag structural contradictions, humans arbitrate the architectural decisions.
-
----
-
-## 7. Repository Structure
-
-```text
-alan-coding-dark-factory/
-├── README.md                   # System positioning and overview
-├── AGENTS.md                   # Agent routing entry point
-├── framework/                  # The core execution kernel
-│   ├── ACDF_kernel.md          # Canonical binding doctrine and axioms
-│   ├── ACDF_lifecycle.md       # Stage 0 to Stage 8 sequential gating rules
-│   ├── ACDF_authority.md       # Content-hashed snapshots and lock rules
-│   ├── ACDF_execution.md       # Claiming locks, NDJSON logs, and loop budgets
-│   ├── ACDF_verify.md          # Test gate standards and smoke testing E2E reports
-│   └── ACDF_hero_lenses.md     # Curated living knowledge module lens cards
-├── schemas/                    # JSON Schemas enforcing machine-readable state boundaries
-├── templates/                  # Scaffolds for target project workspaces
-└── examples/                   # Walkthrough of a tiny golden change
-```
+This orchestrator pipeline approximates many of the practical workflow benefits of a **Mixture-of-Experts (MoE) engineering process** without requiring custom model training, distributed model inference, or expensive custom serving infrastructure.
 
 ---
 
-## 8. Quick Start
+## 4. Human-in-the-Loop Governance
 
-### 1. Initialize ACDF in your project
-Copy the `.acdf/` structure from the `templates/` directory to the root of your target codebase:
-```bash
-cp -r templates/.acdf /path/to/your/project/
-```
+ACDF does not aim for complete, unguided autonomy. It enforces a strict division of responsibility:
 
-### 2. Set the Reference Guide
-Update `.acdf/reference/guide.md` with your system constants, TypeScript interfaces, and API payload definitions.
+> **Humans govern. Agents execute.**
 
-### 3. Route Your Agent
-Open `AGENTS.md` in your AI coding assistant and let it route its tasks sequentially through the lifecycle.
+Today, these critical tasks remain deliberate human responsibilities:
+1. **Curating Ingestion Sources**: Selecting which expert literature, papers, or codebase reviews populate a Hero Lens.
+2. **Arbitrating Conflicts**: Aligning systems when adversarial reviews flag architectural contradictions.
+3. **Defining Correctness**: Stating the project's success criteria and active trust zones.
+4. **Sealing Authority**: Reviewing and signing off on Stage 4 `authority.json` snapshots.
+5. **Evaluating Tradeoffs**: Deciding when to accept code debt or architectural compromises.
 
 ---
 
-## 9. Example Lifecycle Execution
+## 5. Model-First Engineering (Stage 0.5)
 
-ACDF enforces a sequential **Stage 0 → Stage 8** lifecycle flow:
+ACDF operates on a strict model-first philosophy:
 
 ```
-[Stage 0: Explore] ──► [Stage 0.5: Model] ──► [Stage 1: Reference] ──► [Stage 2: Tasking] ──► [Stage 3: Critique]
-                                                                                                    │
-[Stage 8: Retro] ◄── [Stage 7: Stabilize] ◄── [Stage 6.5: Smoke] ◄── [Stage 6: Verify] ◄── [Stage 5: Claim] ◄─┘
+Idea ──► Mental Models (Stage 0.5) ──► Specifications (Stage 1) ──► Execution (Stage 5)
 ```
 
-1. **Stage 0 (Intent Capture)**: Run `/acdf:explore` to map out raw ideas, JTBD metrics, and research parameters.
-2. **Stage 0.5 (Modeling)**: Create Mermaid flowcharts, sequence diagrams, and state transitions.
-3. **Stage 1 (Reference Guide)**: Map APIs and invariants. Enforce the "Ten No's" spec checklist.
-4. **Stage 2 (Tasking)**: Compile a task list with whitelistedAllowed Files and designated test commands.
-5. **Stage 3 (Critique)**: Evaluate the models and tasks using the active Hero Lenses.
-6. **Stage 4 (Snapshot)**: Seal a content-hashed snapshot of configuration files in `authority.json`.
-7. **Stage 5 (Claim)**: Write task lockfiles to `claims/` and implement code inside bounded loops.
-8. **Stage 6 (Verify)**: Run unit compilers and test commands, generating receipt files.
-9. **Stage 6.5 (Smoke Test)**: Run Playwright or headless browser scripts to verify E2E states.
-10. **Stage 7 (Stabilize)**: Create a cold-start deployment runbook.
-11. **Stage 8 (Retrospective)**: Extract learning cards from ledger logs and update Reference Guide lint rules to prevent future failure modes.
+Mermaid diagrams are not documentation; they are **executable mental models** that drive specifications, authority, and task board dependencies. 
+
+Every non-trivial change must generate:
+* **Flowcharts**: Mapping decision paths.
+* **Sequence Diagrams**: Mapping API request-response and data boundaries.
+* **State Machines**: Mapping valid states and transition gates.
+
+No code implementation is allowed until these diagrams are verified and locked.
 
 ---
 
-## 10. Long-Term Vision
+## 6. What Makes ACDF Different
 
-ACDF is architected to survive shifts in AI model capabilities. As models improve, the manual orchestration steps decrease, but the underlying **governance principles, gates, and authority layers remain stable**. 
+Here is where ACDF fits compared to prompt engineering and specification frameworks:
 
-By separating the **reasoning prior** (which evolves via NotebookLM updates) from the **operating protocol** (which remains locked in the kernel), ACDF represents a future-proof OS for governed software automation.
+| Feature / Dimension | Prompt Engineering | Spec-Driven Frameworks | GitHub Spec Kit | ACDF v8 |
+|---|---|---|---|---|
+| **Primary Focus** | Text instructions | Spec agreement | Spec validation | **Execution governance** |
+| **Workflow Model** | Fluid | Fluid | Linear / Waterfall | **Sequential & Gated** |
+| **Knowledge Engine** | Static prompts | None | None | **Evolving Hero Lenses** |
+| **Ingestion Pipeline** | Manual | None | None | **NotebookLM Corpora** |
+| **Write Constraints** | None | Directory-wide | Branch-wide | **Content-Hashed snaps** |
+| **System Modeling** | Optional | Optional | Optional | **Stage 0.5 Mermaid Models** |
+| **Verification Gate** | None | Optional | Mandatory | **Binary Gates & Smoke Reports** |
+| **Orchestration** | Single Model | Single Model | Single Model | **Multi-Model Orchestrator** |
+| **Organizational Learning**| Lost in logs | None | None | **Retro Spec Invariant Sync** |
+
+---
+
+## 7. The 11 Lifecycle Stages
+
+Every codebase modification walks a strict sequential path:
+
+* **Stage 0: Intent Capture** — Guides user briefs and JTBD interviews.
+* **Stage 0.5: Architectural Modeling** — Generates executable Mermaid diagrams.
+* **Stage 1: Reference Guide** — Asserts interfaces, schemas, and the "Ten No's" list.
+* **Stage 2: Change Setup** — Scaffolds change folders and maps task boards.
+* **Stage 3: Adversarial Review** — Challenges models and designs via Hero Lenses.
+* **Stage 4: Snapshot Lock** — Creates a content-hashed state verification check.
+* **Stage 5: Claim & Build** — Claims tasks and writes code inside bounded loops.
+* **Stage 6: Verify Gate** — Asserts compiler correctness and unit test success.
+* **Stage 6.5: Smoke Test** — Executes E2E pathways in headless browser environments.
+* **Stage 7: Stabilization** — Compiles cold-start project runbooks.
+* **Stage 8: Retrospective** — Feeds back learning cards to update reference guidelines.
+
+---
+
+## 8. Long-Term Vision
+
+By separating **Knowledge** (which evolves via NotebookLM updates) from **Protocol** (which remains locked in the kernel), ACDF future-proofs autonomous development. 
+
+As frontier models improve, manual orchestration steps may shrink, but the core operating system boundaries, content-hashed snapshots, and sequential gates remain stable, establishing ACDF as a robust engineering operating system for AI-driven software development.
