@@ -12,10 +12,12 @@ Read this routing guide before executing tasks or modifying files in this worksp
 |---|---|---|
 | Main operating principles | [ACDF_kernel.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_kernel.md) | Canonical doctrine binding. Read first. |
 | Stage Progression | [ACDF_lifecycle.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_lifecycle.md) | Gated progression map for Stages 0–8. |
+| Multi-Model Review | [ACDF_multimodel_review.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_multimodel_review.md) | Human-guided blind review & NotebookLM pipeline. |
 | Authority snaps | [ACDF_authority.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_authority.md) | Content-hashed snaps locking change limits. |
 | Execution / claims | [ACDF_execution.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_execution.md) | Task board claim locks, loops, and runbooks. |
 | Binary gates / smoke testing | [ACDF_verify.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_verify.md) | Compilers, test logs, and headless browser evidence. |
 | Advisory lenses | [ACDF_hero_lenses.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_hero_lenses.md) | Curated expert heuristics (advisory check). |
+| Learning Curriculum | [learn/README.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/README.md) | Curriculum for engineering thinking. |
 
 ---
 

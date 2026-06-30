@@ -160,7 +160,19 @@ Every codebase modification walks a strict sequential path:
 
 ---
 
-## 8. Long-Term Vision
+## 8. Long-Horizon Human-Guided Review
+
+ACDF can be used manually to extend the effective reasoning horizon of frontier models. Humans orchestrate multiple frontier models across independent critique rounds, then use NotebookLM-backed expert corpora to extract source-grounded engineering doctrine. 
+
+This does not eliminate human judgment. It amplifies it.
+
+> ACDF treats long-horizon engineering as a human-guided process: models argue, expert corpora inform, evidence decides, and humans retain authority.
+
+For details, see [ACDF_multimodel_review.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_multimodel_review.md).
+
+---
+
+## 9. Long-Term Vision
 
 By separating **Knowledge** (which evolves via NotebookLM updates) from **Protocol** (which remains locked in the kernel), ACDF future-proofs autonomous development. 
 

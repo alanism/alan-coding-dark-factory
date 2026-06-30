@@ -45,7 +45,27 @@ REQUIRED_FILES = [
     "examples/tiny-change/evidence/task-1_verify.log",
     "examples/tiny-change/receipts/task-1.json",
     "examples/tiny-change/retrospective.md",
-    "examples/tiny-change/config.txt"
+    "examples/tiny-change/config.txt",
+    "framework/ACDF_multimodel_review.md",
+    "framework/ACDF_reference.md",
+    "templates/review_prompts/round_1_independent_review.md",
+    "templates/review_prompts/round_2_cross_examination.md",
+    "templates/review_prompts/round_3_final_risk_register.md",
+    "templates/review_prompts/synthesis_prompt.md",
+    "templates/review_prompts/notebooklm_9_questions.md",
+    "learn/README.md",
+    "learn/00_Welcome.md",
+    "learn/01_What_Is_Software.md",
+    "learn/02_How_Engineers_Think.md",
+    "learn/03_Problems_Before_Code.md",
+    "learn/04_Thinking_With_Diagrams.md",
+    "learn/05_Your_First_Mermaid.md",
+    "learn/06_How_AI_Helps_Engineers.md",
+    "learn/07_Your_First_ACDF_Project.md",
+    "learn/08_Hero_Lenses.md",
+    "learn/09_Multi_Model_Adversarial_Review.md",
+    "learn/10_Building_Real_Projects.md",
+    "learn/11_Next_Steps.md"
 ]
 
 FORBIDDEN_TERMS = [

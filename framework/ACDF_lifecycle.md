@@ -23,7 +23,7 @@ This document defines the sequential stages of the ACDF v8 engineering lifecycle
 * **Next Unlock**: Stage 1 (Reference Guide Specification).
 
 ### Stage 1: Reference Guide Specification
-* **Inputs**: Stage 0.5 Architectural models, research notes, and APIs.
+* **Inputs**: Stage 0.5 Architectural models, research notes, APIs, and synthesized expert source packs from the [NotebookLM Ingestion Workflow](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_multimodel_review.md).
 * **Outputs**: Updated `.acdf/reference/guide.md` (schemas, constants, invariants, trust zones, forbidden files).
 * **Binary Gate**: Core schemas and interfaces are compiled. The guide satisfies the "Ten No's" check list.
 * **Evidence**: Compiler/linter exits 0 when building schema definitions.
@@ -40,9 +40,9 @@ This document defines the sequential stages of the ACDF v8 engineering lifecycle
 
 ### Stage 3: Adversarial Review
 * **Inputs**: Stage 0.5 Architectural models, `proposal.md`, `design.md`, and `tasks.md`.
-* **Outputs**: `.acdf/changes/<change-id>/risk_review.md`.
+* **Outputs**: `.acdf/changes/<change-id>/risk_review.md` generated via the [Multi-Model Adversarial Review Workflow](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_multimodel_review.md).
 * **Binary Gate**: At least 3 independent advisory risk lenses have evaluated and challenged the models, sequence mappings, and task list.
-* **Evidence**: Signed check-offs from each lens inside the risk review log.
+* **Evidence**: Signed check-offs from each lens inside the risk review log or risk register.
 * **Stop Conditions**: A critical security, scaling, or database migration risk is flagged in the models without a mitigation task.
 * **Next Unlock**: Stage 4 (Execution Readiness).
 

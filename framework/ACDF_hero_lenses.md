@@ -12,7 +12,7 @@ Hero Lenses in ACDF v8 are living engineering knowledge modules synthesized from
 
 ## 2. NotebookLM Ingestion Model
 
-A Hero Lens is synthesized from a curated, living expert engineering corpus of a specific expert's published work. The framework evolves continuously without modifying its underlying architecture by updating the NotebookLM source material.
+A Hero Lens is synthesized from a curated, living expert engineering corpus of a specific expert's published work using the [ACDF NotebookLM Ingestion Workflow](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_multimodel_review.md). The framework evolves continuously without modifying its underlying architecture by updating the NotebookLM source material.
 
 ```text
 Books, Talks, Podcasts, Conference presentations, Interviews, Papers, Tweets, GitHub discussions
