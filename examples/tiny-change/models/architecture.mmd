@@ -1,0 +1,4 @@
+flowchart TD
+    %% Golden Example Model for Tiny Change
+    Agent([Agent Execution]) -->|cat config.txt| ConfigFile[config.txt]
+    ConfigFile -->|harmless_key=harmless_value| VerifyScript[verify_acdf_repo.py]

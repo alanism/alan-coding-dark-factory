@@ -1,6 +1,6 @@
 # ACDF v8 Lifecycle — Gated Sequential Stages
 
-This document defines the 9 sequential stages of the ACDF v8 engineering lifecycle. Stages are execution milestones. Transitioning between stages requires binary verification of inputs and outputs. No phase gates can be bypassed.
+This document defines the sequential stages of the ACDF v8 engineering lifecycle. Stages are execution milestones. Transitioning between stages requires binary verification of inputs and outputs. No phase gates can be bypassed.
 
 ---
 
@@ -12,10 +12,18 @@ This document defines the 9 sequential stages of the ACDF v8 engineering lifecyc
 * **Binary Gate**: STAGE0_INTENT.md contains validated Job-to-be-Done (JTBD), primary user definition, and open research questions are mapped.
 * **Evidence**: Stage 0 artifacts successfully committed to the repository (no application source code modified).
 * **Stop Conditions**: The brief lacks a clear user metric or the agent cannot define what success means.
-* **Next Unlock**: Stage 1 (Reference Guide).
+* **Next Unlock**: Stage 0.5 (Architectural Modeling).
+
+### Stage 0.5: Architectural Modeling
+* **Inputs**: `STAGE0_INTENT.md`, research notes, and active project code.
+* **Outputs**: Validated Mermaid diagrams located in `.acdf/changes/<change-id>/models/` (e.g. flowcharts, sequence diagrams, state diagrams, ER schemas, dependency graphs, or C4 container mappings).
+* **Binary Gate**: Every dynamic system element, component interface, and state transition is represented. Mermaid script syntax compiles clean with zero errors.
+* **Evidence**: Validated Mermaid code snippets verified by markdown parsing tools.
+* **Stop Conditions**: State transitions are left unmapped or components mentioned in intent docs are missing from the diagrams.
+* **Next Unlock**: Stage 1 (Reference Guide Specification).
 
 ### Stage 1: Reference Guide Specification
-* **Inputs**: Stage 0 research notes, existing spec docs, and APIs.
+* **Inputs**: Stage 0.5 Architectural models, research notes, and APIs.
 * **Outputs**: Updated `.acdf/reference/guide.md` (schemas, constants, invariants, trust zones, forbidden files).
 * **Binary Gate**: Core schemas and interfaces are compiled. The guide satisfies the "Ten No's" check list.
 * **Evidence**: Compiler/linter exits 0 when building schema definitions.
@@ -23,7 +31,7 @@ This document defines the 9 sequential stages of the ACDF v8 engineering lifecyc
 * **Next Unlock**: Stage 2 (Change Setup & Tasking).
 
 ### Stage 2: Change Setup & Tasking
-* **Inputs**: Core Reference Guide (`.acdf/reference/guide.md`).
+* **Inputs**: Stage 0.5 Models and Stage 1 Reference Guide (`.acdf/reference/guide.md`).
 * **Outputs**: `.acdf/changes/<change-id>/` directory containing `proposal.md`, `design.md`, and `tasks.md`.
 * **Binary Gate**: Topological sort of tasks is resolved. Every task has a whitelisted `allowed_files` array and a designated `binary_gate` test command.
 * **Evidence**: Successful JSON validation of `change.json` metadata against `change.schema.json`.
@@ -31,17 +39,17 @@ This document defines the 9 sequential stages of the ACDF v8 engineering lifecyc
 * **Next Unlock**: Stage 3 (Adversarial Review).
 
 ### Stage 3: Adversarial Review
-* **Inputs**: Active `proposal.md`, `design.md`, and `tasks.md`.
+* **Inputs**: Stage 0.5 Architectural models, `proposal.md`, `design.md`, and `tasks.md`.
 * **Outputs**: `.acdf/changes/<change-id>/risk_review.md`.
-* **Binary Gate**: At least 3 independent advisory risk lenses have evaluated the design, logging critiques and mitigation items.
+* **Binary Gate**: At least 3 independent advisory risk lenses have evaluated and challenged the models, sequence mappings, and task list.
 * **Evidence**: Signed check-offs from each lens inside the risk review log.
-* **Stop Conditions**: A critical security, scaling, or database migration risk is flagged without a mitigation task.
+* **Stop Conditions**: A critical security, scaling, or database migration risk is flagged in the models without a mitigation task.
 * **Next Unlock**: Stage 4 (Execution Readiness).
 
 ### Stage 4: Execution Readiness (Snapshot)
-* **Inputs**: Locked tasks, design, and Reference Guide.
+* **Inputs**: Locked tasks, design, models, and Reference Guide.
 * **Outputs**: `.acdf/changes/<change-id>/authority.json`.
-* **Binary Gate**: Content-hashed snapshot of the Reference Guide, architecture graph, and task board is sealed.
+* **Binary Gate**: Content-hashed snapshot of the Reference Guide, architectural diagrams, and task board is sealed.
 * **Evidence**: Validation of `authority.json` against `authority.schema.json`.
 * **Stop Conditions**: File hashes do not match the current working copy on disk.
 * **Next Unlock**: Stage 5 (Implementation).

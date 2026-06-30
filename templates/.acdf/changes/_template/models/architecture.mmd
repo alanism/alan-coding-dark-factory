@@ -1,0 +1,7 @@
+flowchart TD
+    %% Define Stage 0.5 System Architecture Template
+    User([User]) -->|API Request| Gateway[API Gateway]
+    Gateway -->|Authentication Check| AuthZone[Auth System]
+    AuthZone -->|Session Token| Gateway
+    Gateway -->|Validated Request| Controller[Controller / Logic]
+    Controller -->|Read / Write| Database[(Database)]

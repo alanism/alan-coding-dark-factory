@@ -28,12 +28,14 @@ REQUIRED_FILES = [
     "templates/.acdf/changes/_template/design.md",
     "templates/.acdf/changes/_template/tasks.md",
     "templates/.acdf/changes/_template/authority.json",
+    "templates/.acdf/changes/_template/models/architecture.mmd",
     "templates/.acdf/changes/_template/claims/.gitkeep",
     "templates/.acdf/changes/_template/state-log.ndjson",
     "templates/.acdf/changes/_template/evidence/.gitkeep",
     "templates/.acdf/changes/_template/receipts/.gitkeep",
     "templates/.acdf/changes/_template/retrospective.md",
     "examples/tiny-change/change.json",
+    "examples/tiny-change/models/architecture.mmd",
     "examples/tiny-change/proposal.md",
     "examples/tiny-change/design.md",
     "examples/tiny-change/tasks.md",
@@ -206,26 +208,28 @@ def test_lifecycle_gates():
     with open(lifecycle_path, "r", encoding="utf-8") as f:
         content = f.read()
         
-    stages = re.split(r"###\s+Stage\s+\d+:", content)
-    # The first split element is headers, the rest are stages 0-8 (10 total elements)
-    if len(stages) < 10:
-        log_failure(f"Failed to find all 9 stages in ACDF_lifecycle.md (found {len(stages)-1}/10 sections)")
+    stages = re.split(r"###\s+Stage\s+\d+(?:\.\d+)?:", content)
+    # The first split element is headers, the rest are stages (12 total elements: headers + 11 stages)
+    if len(stages) < 12:
+        log_failure(f"Failed to find all 11 stages in ACDF_lifecycle.md (found {len(stages)-1}/11 sections)")
         passed = False
     else:
-        log_success("Found all lifecycle stages (Stage 0 to Stage 8) in ACDF_lifecycle.md")
+        log_success("Found all lifecycle stages (Stage 0 to Stage 8, including 0.5 and 6.5) in ACDF_lifecycle.md")
         
     # Check that each stage section has the 6 required bullet points
     for idx, stage_content in enumerate(stages[1:]):
-        stage_num = idx
+        # We can extract the stage name from the first line of stage_content
+        first_line = stage_content.strip().split("\n")[0]
+        stage_name = first_line.strip()
         missing_reqs = []
         for req in LIFECYCLE_REQUIREMENTS:
             if req not in stage_content:
                 missing_reqs.append(req)
         if missing_reqs:
-            log_failure(f"Stage {stage_num} is missing required fields: {', '.join(missing_reqs)}")
+            log_failure(f"Stage '{stage_name}' is missing required fields: {', '.join(missing_reqs)}")
             passed = False
         else:
-            log_success(f"Stage {stage_num} has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)")
+            log_success(f"Stage '{stage_name}' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)")
             
     return passed
 
