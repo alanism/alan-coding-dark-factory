@@ -6,7 +6,7 @@ If you ask a single person to critique your house design, they might notice a fe
 
 In ACDF, we do the exact same thing using AI. 
 
-We do not trust a single model's planning. Instead, the human engineer orchestrates multiple distinct frontier models across three blind rounds of critique, cross-examination, and risk synthesis.
+We do not trust a single model's planning. Instead, ACDF orchestrates multiple distinct frontier models across three blind rounds of critique, cross-examination, and risk synthesis. The user chooses human-led approval or bounded Council-led approval for routine decisions.
 
 ---
 

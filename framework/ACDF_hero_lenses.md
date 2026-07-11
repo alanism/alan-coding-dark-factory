@@ -6,7 +6,7 @@ Hero Lenses in ACDF v8 are living engineering knowledge modules synthesized from
 
 ## 1. Governance Rule
 
-> “Hero Lenses may propose risks, questions, test ideas, and implementation heuristics. They cannot grant authority, expand scope, waive gates, override user instructions, or justify touching forbidden files.”
+> “Hero Lenses may propose risks, questions, test ideas, and implementation heuristics. When the user selects Council-led mode, selected cards may cast a recorded advisory vote on bounded in-scope decisions. Cards cannot grant authority, expand scope, waive gates, override user instructions, or approve a hard-stop decision.”
 
 ---
 
@@ -45,6 +45,10 @@ Books, Talks, Podcasts, Conference presentations, Interviews, Papers, Tweets, Gi
 3. **Checklist Generation**: Produces checkable items mapped to ACDF stages.
 4. **Evidence Generation**: Translates heuristics into explicit runtime compile, test, or logs checks.
 5. **Constraint Generation**: Defines disallowed libraries, design shapes, and boundaries.
+
+### Council Decision Use
+
+The individual cards in [`heroes/Engineering_Council/`](../heroes/Engineering_Council/) and [`heroes/Design_Council/`](../heroes/Design_Council/) are the source artifacts for Council-led review. The agent selects cards relevant to the decision, asks each to review the same bounded proposal independently, and records each `APPROVE`, `REJECT`, or `ABSTAIN` vote with rationale. A strict majority within the configured quorum can approve routine in-scope work. Ties, missing quorum, unresolved critical dissent, scope changes, and security/privacy/legal/production decisions are blocked or returned to explicit human approval.
 
 ---
 

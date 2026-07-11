@@ -55,9 +55,9 @@ Look back at your microwave specification (`microwave_spec.txt`) from Lesson 1 o
 
 ## 5. Hero Lens Reflection
 
-Why must we treat lenses as advisory rather than authority sources?
+Why must we treat lenses as bounded advisory inputs rather than unrestricted authority sources?
 * **ACDF Rule**: *“Hero Lenses may propose risks, questions, test ideas, and implementation heuristics. They cannot grant authority, expand scope, waive gates, override user instructions, or justify touching forbidden files.”*
-* Human developers retain the governing authority. Lenses advise; they do not dictate policy.
+* In human-led mode, the human approves required decisions. In council-led mode, selected cards may cast recorded votes on bounded in-scope decisions. Lenses still cannot dictate policy, waive gates, expand scope, or approve hard stops.
 
 ---
 

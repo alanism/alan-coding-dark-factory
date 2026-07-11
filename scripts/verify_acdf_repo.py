@@ -48,11 +48,32 @@ REQUIRED_FILES = [
     "examples/tiny-change/config.txt",
     "framework/ACDF_multimodel_review.md",
     "framework/ACDF_reference.md",
+    "framework/ACDF_workflow.mmd",
+    "docs/README.md",
+    "docs/notebooklm-inventory.md",
+    "docs/coding-reference-guide-process.md",
+    "docs/hero-lens-card-process.md",
+    "templates/APPROVAL_POLICY.md",
+    "heroes/README.md",
+    "heroes/Design_Council/andy_allen_design_hero.md",
+    "heroes/Design_Council/ryo_lu_design_hero.md",
+    "heroes/Engineering_Council/andrej_karpathy_coding_hero.md",
+    "heroes/Engineering_Council/boris_cherny_coding_hero.md",
+    "heroes/Engineering_Council/bret_taylor_coding_hero.md",
+    "heroes/Engineering_Council/jeffrey_quesnelle_coding_hero.md",
+    "heroes/Engineering_Council/jeff_dean_coding_hero.md",
+    "heroes/Engineering_Council/john_carmack_coding_hero.md",
+    "heroes/Engineering_Council/mitchell_hashimoto_coding_hero.md",
+    "heroes/Engineering_Council/nicholas_carlini_coding_hero.md",
+    "heroes/Engineering_Council/raphael_schaad_coding_hero.md",
+    "heroes/Engineering_Council/ryan_lopopolo_coding_hero.md",
+    "heroes/Engineering_Council/simon_willison_coding_hero.md",
     "templates/review_prompts/round_1_independent_review.md",
     "templates/review_prompts/round_2_cross_examination.md",
     "templates/review_prompts/round_3_final_risk_register.md",
     "templates/review_prompts/synthesis_prompt.md",
     "templates/review_prompts/notebooklm_9_questions.md",
+    "templates/review_prompts/council_decision.md",
     "learn/README.md",
     "learn/00_Welcome.md",
     "learn/01_What_Is_Software.md",
@@ -75,7 +96,7 @@ FORBIDDEN_TERMS = [
     r"\bUnCommon\s+Core\b",
     r"\bHermes\s+Thrice\s+Great\b",
     r"\bCampaign\s+OS\b",
-    r"\bHermes\b"
+    # Hermes is a public notebook title and appears in the committed source inventory.
 ]
 
 LIFECYCLE_REQUIREMENTS = [
@@ -85,6 +106,14 @@ LIFECYCLE_REQUIREMENTS = [
     "Evidence",
     "Stop Conditions",
     "Next Unlock"
+]
+
+WORKFLOW_REQUIREMENTS = [
+    "NotebookLM MCP",
+    "Engineering Council",
+    "Human approval",
+    "majority vote",
+    "HARD_STOP",
 ]
 
 def log_success(msg):
@@ -145,6 +174,8 @@ def test_example_validation():
         assert "snapshots" in auth_data, "Missing snapshots"
         assert "write_rules" in auth_data, "Missing write_rules"
         assert "allowed_files" in auth_data["write_rules"], "Missing allowed_files"
+        assert "approval" in auth_data, "Missing approval record"
+        assert auth_data["approval"]["decision"] in ["APPROVED", "BLOCKED"], "Invalid approval decision"
         log_success("authority.json fits authority schema constraints")
     except Exception as e:
         log_failure(f"authority.json validation failure: {e}")
@@ -188,6 +219,21 @@ def test_example_validation():
         passed = False
 
     return passed
+
+def test_workflow_contract():
+    workflow_path = os.path.join(REPO_ROOT, "framework/ACDF_workflow.mmd")
+    try:
+        with open(workflow_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        missing = [term for term in WORKFLOW_REQUIREMENTS if term.lower() not in content.lower()]
+        if missing:
+            log_failure(f"Canonical workflow is missing required concepts: {', '.join(missing)}")
+            return False
+        log_success("Canonical Mermaid workflow covers MCP, councils, approval, voting, and hard stops.")
+        return True
+    except Exception as e:
+        log_failure(f"Canonical workflow validation failure: {e}")
+        return False
 
 def test_forbidden_references():
     passed = True
@@ -260,7 +306,8 @@ def main():
         test_json_schemas(),
         test_example_validation(),
         test_forbidden_references(),
-        test_lifecycle_gates()
+        test_lifecycle_gates(),
+        test_workflow_contract()
     ]
     
     print("-------------------------------------------------")

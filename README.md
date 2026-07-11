@@ -4,15 +4,7 @@
 
 Alan Coding Dark Factory (ACDF) is an autonomous, sequential, and gate-governed AI engineering operating system. ACDF does not compile code in a vacuum; it acts as a deterministic execution container that enforces architectural constraints, content-hashed snapshots, and continuous learning feedback loops.
 
-```mermaid
-flowchart LR
-    Idea([Idea]) --> Model[Model Stage 0.5]
-    Model --> Reference[Reference Stage 1]
-    Reference --> Authority[Authority Stage 4]
-    Authority --> Execute[Execute Stage 5]
-    Execute --> Verify[Verify Stage 6]
-    Verify --> Learn[Learn Stage 8]
-```
+The canonical Mermaid-first workflow is [`framework/ACDF_workflow.mmd`](framework/ACDF_workflow.mmd). It models public NotebookLM MCP sources, individual Hero Lens cards, human-led approvals, Council-led majority approval, hard stops, and the gated execution path.
 
 ---
 
@@ -90,18 +82,20 @@ This orchestrator pipeline approximates many of the practical workflow benefits 
 
 ---
 
-## 4. Human-in-the-Loop Governance
+## 4. Human and Council Governance
 
-ACDF does not aim for complete, unguided autonomy. It enforces a strict division of responsibility:
+ACDF does not aim for complete, unguided autonomy. The user selects one of two explicit approval modes:
 
-> **Humans govern. Agents execute.**
+* **Human-led**: the human approves every required decision.
+* **Council-led**: the relevant Engineering and/or Design Council evaluates routine, in-scope decisions through recorded votes. A quorum and strict majority are required.
 
-Today, these critical tasks remain deliberate human responsibilities:
+Council-led mode removes routine approval bottlenecks but does not remove human authority over:
 1. **Curating Ingestion Sources**: Selecting which expert literature, papers, or codebase reviews populate a Hero Lens.
-2. **Arbitrating Conflicts**: Aligning systems when adversarial reviews flag architectural contradictions.
-3. **Defining Correctness**: Stating the project's success criteria and active trust zones.
-4. **Sealing Authority**: Reviewing and signing off on Stage 4 `authority.json` snapshots.
-5. **Evaluating Tradeoffs**: Deciding when to accept code debt or architectural compromises.
+2. **Defining Correctness**: Stating the project's success criteria and active trust zones.
+3. **Hard-stop decisions**: Security, privacy, legal, production release, credentials, external data boundaries, scope expansion, and changed requirements.
+4. **Resolving blocked votes**: Handling ties, missing quorum, or unresolved critical dissent.
+
+Every council decision is recorded with the proposal hash, selected cards, voter-by-voter result, quorum, majority calculation, dissent, rationale, and final outcome before authority is sealed. Individual cards are published in [`heroes/Engineering_Council/`](heroes/Engineering_Council/) and [`heroes/Design_Council/`](heroes/Design_Council/).
 
 ---
 
@@ -110,7 +104,7 @@ Today, these critical tasks remain deliberate human responsibilities:
 ACDF operates on a strict model-first philosophy:
 
 ```
-Idea ──► Mental Models (Stage 0.5) ──► Specifications (Stage 1) ──► Execution (Stage 5)
+Idea ──► Mermaid model (Stage 0.5) ──► NotebookLM MCP + Hero Cards ──► Specifications (Stage 1) ──► Approval ──► Execution (Stage 5)
 ```
 
 Mermaid diagrams are not documentation; they are **executable mental models** that drive specifications, authority, and task board dependencies. 
@@ -162,11 +156,11 @@ Every codebase modification walks a strict sequential path:
 
 ## 8. Long-Horizon Human-Guided Review
 
-ACDF can be used manually to extend the effective reasoning horizon of frontier models. Humans orchestrate multiple frontier models across independent critique rounds, then use NotebookLM-backed expert corpora to extract source-grounded engineering doctrine. 
+ACDF can be used manually or with bounded Council delegation to extend the effective reasoning horizon of frontier models. Independent models and NotebookLM-backed expert corpora provide source-grounded doctrine; the selected approval mode determines who approves routine decisions.
 
-This does not eliminate human judgment. It amplifies it.
+This does not eliminate human judgment. It reserves human attention for correctness boundaries and hard stops while making routine, evidenced decisions auditable and delegable.
 
-> ACDF treats long-horizon engineering as a human-guided process: models argue, expert corpora inform, evidence decides, and humans retain authority.
+> ACDF treats long-horizon engineering as a governed process: models argue, expert corpora inform, evidence decides, and humans retain hard-stop authority.
 
 For details, see [ACDF_multimodel_review.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_multimodel_review.md).
 

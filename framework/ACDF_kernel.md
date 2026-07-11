@@ -16,6 +16,15 @@ All agent operations are governed by these core axioms:
 6. **Runtime Truth over Planning Confidence**: A highly detailed plan that fails to boot in a clean environment is a failure. Empiricism and runtime metrics override planning confidence.
 7. **Retrospective Learning over Repeated Failure**: Operational failures must compound into future security, compiler, or linter rules. Every bug patch must include a prevention rule in the Reference Guide.
 
+### 1.1 Bounded Approval Delegation
+
+The user selects one approval mode at Stage 0 and the choice is recorded in the change artifacts:
+
+- **Human-led**: the human approves each decision that requires approval.
+- **Council-led**: the relevant Engineering and/or Design Council reviews the decision and records individual votes, quorum, majority result, dissent, and rationale.
+
+Council-led approval is a bounded delegation mechanism, not autonomous authority. It may approve routine, in-scope coding or design decisions only when the required quorum is met and a strict majority votes approve. A tie, missing quorum, unresolved critical dissent, scope expansion, or changed success criteria blocks the change. Security, privacy, legal, production-release, credential, and external-data-boundary decisions always require explicit human approval; a council cannot waive those hard stops or any lifecycle gate.
+
 ---
 
 ## 2. Target Project Workspace Layout

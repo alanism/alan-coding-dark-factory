@@ -13,6 +13,8 @@ The Reference Guide must contain:
 2. **Data Schemas**: Database table constraints, column data types, and primary/foreign key relationships.
 3. **System Invariants**: Strict rules (e.g. "Negative transaction amounts are forbidden").
 4. **Trust Zones**: Network boundaries and permission containment rules.
+5. **Knowledge Provenance**: NotebookLM title, ID, public share URL, MCP access mode, extraction rounds, and source gaps for every imported guide or Hero Lens.
+6. **Approval Policy**: The selected human-led or council-led mode, eligible council members, quorum, majority rule, and hard-stop decisions that always require a human.
 
 ---
 
@@ -21,10 +23,10 @@ The Reference Guide must contain:
 To ensure the Reference Guide is robust, it must be compiled and stress-tested using these core workflows:
 
 ### A. NotebookLM Ingestion
-New spec invariants and heuristics are extracted from expert engineering literature using the [NotebookLM Ingestion Workflow](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_multimodel_review.md). The extracted principles become rules in `.acdf/reference/guide.md`.
+New spec invariants and heuristics are extracted from public shared notebooks listed in [`docs/notebooklm-inventory.md`](../docs/notebooklm-inventory.md) using the read-only NotebookLM MCP workflow in [`docs/coding-reference-guide-process.md`](../docs/coding-reference-guide-process.md). The extracted principles become rules in `.acdf/reference/guide.md` only after source gaps and provenance are recorded.
 
 ### B. Multi-Model Adversarial Review
-Before the spec is finalized, the human governor runs the [Multi-Model Adversarial Review Workflow](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/framework/ACDF_multimodel_review.md) to stress-test the schemas, state limits, and trust zones against multiple independent frontier models.
+Before the spec is finalized, the selected approval mode runs the [Multi-Model Adversarial Review Workflow](ACDF_multimodel_review.md) to stress-test the schemas, state limits, and trust zones against multiple independent frontier models and the individual council cards under [`heroes/`](../heroes/).
 
 ---
 
@@ -41,3 +43,4 @@ Every Reference Guide update must satisfy the following checklist before transit
 8. **No Orphaned States**: Define recovery states for interrupted operations.
 9. **No Code Without Test Coverage**: Every invariant must be mapped to a binary gate.
 10. **No Forbidden Writes**: Ensure files in the forbidden list are untouched.
+11. **No Unrecorded Decisions**: Every delegated council decision has a voter-by-voter record, quorum proof, strict-majority result, dissent, and rationale; hard stops have human approval.

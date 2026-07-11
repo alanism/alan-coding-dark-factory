@@ -37,7 +37,52 @@
     },
     "graph_checksum": {
       "type": "string"
+    },
+    "approval": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["human", "council"]
+        },
+        "decision": {
+          "type": "string",
+          "enum": ["APPROVED", "BLOCKED"]
+        },
+        "recorded_by": {
+          "type": "array",
+          "minItems": 1,
+          "items": {"type": "string"}
+        },
+        "votes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "voter": {"type": "string"},
+              "decision": {"type": "string", "enum": ["APPROVE", "REJECT", "ABSTAIN"]},
+              "rationale": {"type": "string"}
+            },
+            "required": ["voter", "decision", "rationale"]
+          }
+        },
+        "quorum": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "approval_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hard_stop": {
+          "type": "boolean"
+        },
+        "rationale": {
+          "type": "string"
+        }
+      },
+      "required": ["mode", "decision", "recorded_by", "votes", "quorum", "approval_count", "hard_stop", "rationale"]
     }
   },
-  "required": ["changeName", "timestamp", "snapshots", "write_rules", "graph_checksum"]
+  "required": ["changeName", "timestamp", "snapshots", "write_rules", "graph_checksum", "approval"]
 }

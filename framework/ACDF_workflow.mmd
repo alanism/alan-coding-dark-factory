@@ -1,0 +1,32 @@
+flowchart TD
+    Intent([Stage 0: Intent and success criteria]) --> Model[Stage 0.5: Mermaid model first]
+    Model --> Inventory[Select source from public NotebookLM inventory]
+    Inventory --> MCP[Read-only NotebookLM MCP connection<br/>shared URL allowlist]
+    MCP --> Reference[Stage 1: Coding reference guide<br/>source-backed rules and invariants]
+    MCP --> Lenses[Stage 1: Design and engineering Hero Lens cards]
+    Reference --> Review[Stage 3: Adversarial review<br/>Hero Lenses challenge the model]
+    Lenses --> Review
+    Review --> Mode{Approval mode selected by user}
+
+    Mode -->|Human-led| Human[Human reviews and approves<br/>each required decision]
+    Mode -->|Council-led| Council[Engineering Council and/or<br/>Design Council review the decision]
+    Council --> Vote{Quorum met and<br/>majority vote recorded?}
+    Vote -->|Yes| Consensus[Record vote, dissent,<br/>rationale, and decision]
+    Vote -->|No / tie| Blocked([BLOCKED: revise or escalate<br/>to human approval])
+    Human --> Decision[Approval record]
+    Consensus --> Decision
+
+    Decision --> HardStop{HARD_STOP:<br/>security, privacy, legal,<br/>production, or scope change?}
+    HardStop -->|Yes| HumanOverride[Human approval required<br/>Council cannot waive hard stops]
+    HardStop -->|No| Authority[Stage 4: Content-hashed authority snapshot]
+    HumanOverride --> Authority
+    Authority --> Execute[Stage 5: Bounded claim and build]
+    Execute --> Verify[Stages 6–6.5: Binary and smoke verification]
+    Verify --> Stabilize[Stage 7: Stabilization and runbook]
+    Stabilize --> Learn[Stage 8: Retrospective and prevention rule]
+    Learn --> Done([Complete with receipts])
+
+    classDef gate fill:#fff3cd,stroke:#8a6d3b,color:#000;
+    classDef stop fill:#f8d7da,stroke:#842029,color:#000;
+    class Mode,Vote,HardStop gate;
+    class Blocked stop;

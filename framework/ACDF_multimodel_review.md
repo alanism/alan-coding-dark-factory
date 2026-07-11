@@ -1,14 +1,29 @@
 # ACDF v8 Multi-Model Review — Long-Horizon Workflow
 
-This document governs the **ACDF Multi-Model Long-Horizon Review Workflow**. It is a manual, human-driven process that orchestrates multiple frontier AI models across blind critique rounds and integrates expert knowledge databases. 
+This document governs the **ACDF Multi-Model Long-Horizon Review Workflow**. It orchestrates multiple frontier AI models across blind critique rounds and integrates public NotebookLM knowledge sources. The user chooses whether required approvals remain human-led or use bounded Council voting.
 
 ---
 
 ## 1. Operating Doctrine
 
-> **Humans govern. Models argue. Evidence decides.**
+> **Humans set the boundary. Models argue. Evidence decides. A configured Council may approve bounded decisions.**
 
-This workflow does not eliminate human judgment—it amplifies it. The human engineer acts as the governor who guides the models, compiles Objections, prevents cross-contamination, resolves conflicts, and seals the final specifications.
+This workflow does not eliminate human judgment—it removes the human from routine approval bottlenecks when the user explicitly selects Council-led mode. The human still defines intent, trust zones, hard stops, and the approval policy. Agents compile objections, prevent cross-contamination, record votes, resolve only bounded conflicts, and seal specifications only after the applicable decision record is valid.
+
+### 1.1 Approval Modes
+
+At Stage 0, record exactly one mode in `APPROVAL_POLICY.md`:
+
+| Mode | Use | Approval rule |
+|---|---|---|
+| `human-led` | Current explicit-approval workflow | The named human approves every required decision. |
+| `council-led` | User wants routine decisions to proceed without being the bottleneck | The relevant Engineering and/or Design Council votes independently; quorum and strict majority must be recorded. |
+
+Council-led mode applies only to routine, in-scope coding and design decisions. A tie, no quorum, unresolved critical dissent, changed success criteria, scope expansion, security/privacy/legal concern, production release, credential change, or external-data-boundary change is `BLOCKED` until a human explicitly approves or the proposal is revised. Council votes never waive a lifecycle gate.
+
+### 1.2 Council Vote Record
+
+Every council decision records: decision ID, proposal hash, selected Hero Cards, eligible voters, each `APPROVE`/`REJECT`/`ABSTAIN` vote, rationale, quorum, approval count, dissent, hard-stop assessment, and final result. The record is attached to `authority.json` before Stage 5 begins.
 
 ---
 
@@ -40,7 +55,7 @@ Ask each model to compile its finalized, prioritized risk register mapping gates
 * **Output**: Save under `.acdf/changes/<change-id>/reviews/round_3/<model_name>.md`.
 
 ### Synthesis
-The human governor synthesizes the final outputs using the [synthesis_prompt.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/templates/review_prompts/synthesis_prompt.md) to generate the active `.acdf/changes/<change-id>/risk_review.md`.
+The selected approval mode synthesizes the final outputs using the [synthesis_prompt.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/templates/review_prompts/synthesis_prompt.md) to generate the active `.acdf/changes/<change-id>/risk_review.md`; human-led mode uses the human governor, while council-led mode records the council result and escalates only blocked or hard-stop decisions.
 * **Rules**:
   - Convert repeated critiques into task gates.
   - Convert unresolved ambiguities into stop conditions.
@@ -57,10 +72,10 @@ Source Collection ──► NotebookLM Ingestion ──► Three Ingestion Round
 ```
 
 ### Step 1: Source Collection
-Human collects primary source materials (talk transcripts, papers, blog posts, codebase audits) for the target expert.
+Select a public shared notebook from [`docs/notebooklm-inventory.md`](../docs/notebooklm-inventory.md) and record its title, ID, and URL. If a new expert source is needed, the user must explicitly curate it before it enters the inventory.
 
-### Step 2: Load into NotebookLM
-Human uploads source materials into a dedicated NotebookLM session (e.g. `lenses/carmack/`).
+### Step 2: Connect Through NotebookLM MCP
+Pass the inventory's public share URL to the configured NotebookLM MCP server in read-only mode. Do not send private project files, credentials, production data, or unpublished requirements to a public notebook. Follow [`docs/coding-reference-guide-process.md`](../docs/coding-reference-guide-process.md) for the coding-guide path and [`docs/hero-lens-card-process.md`](../docs/hero-lens-card-process.md) for the card path.
 
 ### Step 3: Ask Three Rounds of Nine Questions
 Ask the 27 questions defined in [notebooklm_9_questions.md](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/templates/review_prompts/notebooklm_9_questions.md):
@@ -68,4 +83,8 @@ Ask the 27 questions defined in [notebooklm_9_questions.md](file:///Users/alanng
 2. **Round 2 (Application)**: Critiques current model architectures.
 3. **Round 3 (Synthesis)**: Exposes the final distilled engineering doctrine.
 
-Save outputs to `.acdf/reference/lenses/<expert_name>/synthesis_date.md`. Use these synthesized doctrines to update the canonical `framework/ACDF_hero_lenses.md`.
+Save outputs to `.acdf/reference/lenses/<expert_name>/synthesis_date.md` and publish source-safe final cards under [`heroes/Engineering_Council/`](../heroes/Engineering_Council/) or [`heroes/Design_Council/`](../heroes/Design_Council/). Use these synthesized doctrines to update the canonical `framework/ACDF_hero_lenses.md`.
+
+### 2.1 Engineering and Design Council Review
+
+For a council-led decision, select the smallest relevant set of individual cards, present the same proposal and evidence to each card independently, then record the vote. Engineering cards own coding and architecture decisions; Design cards own interaction and visual decisions. Mixed decisions use both councils. A majority is a decision signal, not a bypass around the Reference Guide, authority snapshot, or verification evidence.

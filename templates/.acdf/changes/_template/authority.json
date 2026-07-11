@@ -6,5 +6,15 @@
     "allowed_files": [],
     "forbidden_files": []
   },
-  "graph_checksum": ""
+  "graph_checksum": "",
+  "approval": {
+    "mode": "human",
+    "decision": "BLOCKED",
+    "recorded_by": ["human-governor"],
+    "votes": [],
+    "quorum": 1,
+    "approval_count": 0,
+    "hard_stop": false,
+    "rationale": "Replace with the explicit approval record before Stage 5."
+  }
 }

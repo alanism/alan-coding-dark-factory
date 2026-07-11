@@ -10,5 +10,15 @@
     "allowed_files": ["config.txt"],
     "forbidden_files": ["secret.txt"]
   },
-  "graph_checksum": "abc123def456"
+  "graph_checksum": "abc123def456",
+  "approval": {
+    "mode": "human",
+    "decision": "APPROVED",
+    "recorded_by": ["human-governor"],
+    "votes": [],
+    "quorum": 1,
+    "approval_count": 1,
+    "hard_stop": false,
+    "rationale": "Human approved the bounded tiny change after review."
+  }
 }
