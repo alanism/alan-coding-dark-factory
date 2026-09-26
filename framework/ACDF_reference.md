@@ -1,4 +1,4 @@
-# ACDF v8 Reference Specifier — Implementation Contract
+# ACDF v9 Reference Specifier — Implementation Contract
 
 This document governs the format, creation, and compilation of the **Stage 1 Project Reference Guide** (`.acdf/reference/guide.md`).
 

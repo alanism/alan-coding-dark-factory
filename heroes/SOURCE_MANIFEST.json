@@ -1,0 +1,197 @@
+{
+  "manifest_version": 1,
+  "source_collection": "Engineering Council maintained local snapshot",
+  "import_date": "2026-09-26",
+  "card_count": 17,
+  "source_claims": "Imported local card contents; underlying notebooks, quotes and historical constants were not reverified. No source refresh or endorsement is implied.",
+  "authority": "Advisory; project instructions and selected approval policy control.",
+  "cards": [
+    {
+      "source_name": "andrej_karpathy_coding_hero.md",
+      "source_sha256": "657ed732a211e7d1af9e47be492b2c9915f662d007bbaec93493215b9bfa8c43",
+      "path": "Engineering_Council/andrej_karpathy_coding_hero.md",
+      "shipped_sha256": "8641ea5ca07a04eda2922a457a02ca120fa5328aeafbed534e61ea8b41af51f3",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "andy_allen_design_hero.md",
+      "source_sha256": "e0de22e6c8892e9aedbc6f04f2894850f3fde3634975608d96453fd9bc9595f9",
+      "path": "Design_Council/andy_allen_design_hero.md",
+      "shipped_sha256": "2ee7cb8d6450735daf0e84a936fece9f5780067ced6afdb01db7689204d851de",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "boris_cherny_coding_hero.md",
+      "source_sha256": "a8f029deeaf108f03b2aa1786b9fabb22d33063c218b149b3d2aab5c9d402d7f",
+      "path": "Engineering_Council/boris_cherny_coding_hero.md",
+      "shipped_sha256": "36cb713b457436de88544cc06a7d7bf022b1c25d559f96ca10bd06da23694d1d",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "bret_taylor_coding_hero.md",
+      "source_sha256": "4d0b84de792edfc40e8484c172f3a9fd015ce7270549143ee14d4d016c6ed606",
+      "path": "Engineering_Council/bret_taylor_coding_hero.md",
+      "shipped_sha256": "b8188bf4807f63a1fe8331c98b7fa43962be7e5e6dc86f6827793d1ff23218e2",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "david_heinemeier_hansson_coding_hero.md",
+      "source_sha256": "6332be92924e12f790e75122731ff2d706168451d5838c0ae9cedc209230755f",
+      "path": "Engineering_Council/david_heinemeier_hansson_coding_hero.md",
+      "shipped_sha256": "a1100afe5c11933c917d0bb0685ca0ff39e92d0c75073f6fae634f5d396bc156",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "diogo_almeida_jev_coding_hero.md",
+      "source_sha256": "86e7989fe1b7d293cd924013cff05794092fbc1f574448404143883412db85b1",
+      "path": "Engineering_Council/diogo_almeida_jev_coding_hero.md",
+      "shipped_sha256": "4d739c63338502dd8d5ec096cf262f806eb3dcf7836a390a27c0e91f04246b4d",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "jeff_dean_coding_hero.md",
+      "source_sha256": "01a0efbb199bc317d8e2fbfa6ee04e59a4ec893095e4867a4208c56068da3a02",
+      "path": "Engineering_Council/jeff_dean_coding_hero.md",
+      "shipped_sha256": "33a08935f25df4e70c3a69a47fa714ef44e8aa8d76d7bd4f30f2eeb95a665a8c",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "jeffrey_quesnelle_coding_hero.md",
+      "source_sha256": "f4d49497778d86e189e8e1e9dc4c6f51b7e8b611762bc87c4c9dc237ba0f75d2",
+      "path": "Engineering_Council/jeffrey_quesnelle_coding_hero.md",
+      "shipped_sha256": "e5999bdef389713ff29f2f72f4cf05d3686e0d894eaede96a2f2734852dc4738",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "john_carmack_coding_hero.md",
+      "source_sha256": "e16164fa5fba2e15385661a5df37dc3cefe1b71758917a1fa306a24fe5e14edf",
+      "path": "Engineering_Council/john_carmack_coding_hero.md",
+      "shipped_sha256": "d85ccab1093f5af9f2e87c2234b1e403e24f5c0aa28379025e1c0f343ebe4bf3",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "landon_carter_palantir_coding_hero.md",
+      "source_sha256": "8aae11296701761f84c0c91da244dccd2d3fa86d87fd67e5866aaf682ab8ad9d",
+      "path": "Engineering_Council/landon_carter_palantir_coding_hero.md",
+      "shipped_sha256": "5b99a6e112655a1febe3c40f202dc94d6a4285d97b2a7d6069653f6925581202",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "mitchell_hashimoto_coding_hero.md",
+      "source_sha256": "5a03afe271fee8bc673d47a2eac8f395ac1c078aaefd07477334ccc25a62ce40",
+      "path": "Engineering_Council/mitchell_hashimoto_coding_hero.md",
+      "shipped_sha256": "5f9630aee9db19d12f5238d8a2b6751339641c7fd65a0293ecfb46bc14487011",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "nicholas_carlini_coding_hero.md",
+      "source_sha256": "4fec004ec1f9d4a9aa33b87044e484689244324ddebddd8b494756a242cf5544",
+      "path": "Engineering_Council/nicholas_carlini_coding_hero.md",
+      "shipped_sha256": "7cd8ae29119a02cb76bd937f8034931743a85b995f12ced8c08677784565d8f6",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "raphael_schaad_coding_hero.md",
+      "source_sha256": "35f8324229caa9d6224944d588afc2528ced7a9b05cce568cee0b339fc64b3d2",
+      "path": "Engineering_Council/raphael_schaad_coding_hero.md",
+      "shipped_sha256": "b463a55d84b52072a8540f614a9c02c0e8f6616b89c21145682e0d334254134d",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "ryan_lopopolo_coding_hero.md",
+      "source_sha256": "6748931a7684cca937c3a8e089998ca64777fdfb0da70cf53cfc6913d59dcae7",
+      "path": "Engineering_Council/ryan_lopopolo_coding_hero.md",
+      "shipped_sha256": "3f16d47ddcf16d28baa9a0dfa004c629048bee8f77746b9aabd6e86c267477ef",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "ryo_lu_design_hero.md",
+      "source_sha256": "7ae9e62bf40332e48764ef1a6ea6cc86f35560f869c133fdc7943fefb0293a41",
+      "path": "Design_Council/ryo_lu_design_hero.md",
+      "shipped_sha256": "fd707b156f222ae2e1b8faf598f92c5365f00b17e8e4b0cec3d6a635e6324302",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "simon_willison_coding_hero.md",
+      "source_sha256": "1da42ace1c01736db1636a95dcc80588ef0fdba82261668c8d2b858a299c58d2",
+      "path": "Engineering_Council/simon_willison_coding_hero.md",
+      "shipped_sha256": "a70732e358c86e1870168c2db2b45a2d80c386b4e744c3d1f3a5db9fa2fead60",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    },
+    {
+      "source_name": "thariq_shihipar_coding_hero.md",
+      "source_sha256": "1a0b0f8cf35d8281aa1e3e5a417d51deb1e04727c7638ec108a274dfa2cddd87",
+      "path": "Engineering_Council/thariq_shihipar_coding_hero.md",
+      "shipped_sha256": "0ef89204636984415463fae92ba118d82f2b0e8cf69f681f32f1f9c0802b98a8",
+      "adaptations": [
+        "Stage-aware ACDF and standalone scope",
+        "Relative guide link"
+      ],
+      "primary_sources_reverified": false
+    }
+  ]
+}

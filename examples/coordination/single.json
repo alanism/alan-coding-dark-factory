@@ -1,0 +1,87 @@
+{
+  "contract_version": 1,
+  "mode": "single",
+  "stage": "execution",
+  "approval_mode": "human",
+  "approval_ref": "illustrative-human-decision@1",
+  "plan_ref": "illustrative-approved-plan@1",
+  "spec_ref": "illustrative-reference@1",
+  "integration_owner": "agent-a",
+  "lanes": [
+    {
+      "task_id": "task-1",
+      "agent_id": "agent-a",
+      "role": "implementer",
+      "hero_lens": "Karpathy",
+      "dependencies": [],
+      "workspace": "workspaces/a",
+      "write_files": [
+        "src/config.txt",
+        "evidence/task-1.patch"
+      ],
+      "output_artifact": "evidence/task-1.patch",
+      "context": [
+        "project-instructions@1",
+        "illustrative-approved-plan@1",
+        "illustrative-reference@1",
+        "Karpathy-card@pinned-revision"
+      ],
+      "acceptance_checks": [
+        "Run the approved task checks and retain actual output"
+      ],
+      "stop_conditions": [
+        "Stop on a failed gate, missing requirement or scope change"
+      ],
+      "budget": {
+        "max_cycles": 2,
+        "max_files": 3
+      },
+      "handoff": {
+        "artifact": "evidence/task-1.patch",
+        "evidence": [
+          "evidence/task-1.log"
+        ],
+        "unresolved": [],
+        "recipient": "agent-a"
+      }
+    },
+    {
+      "task_id": "task-2",
+      "agent_id": "agent-a",
+      "role": "integrator",
+      "hero_lens": null,
+      "dependencies": [
+        "task-1"
+      ],
+      "workspace": "workspaces/a",
+      "write_files": [
+        "src/config.txt",
+        "evidence/integration.md"
+      ],
+      "output_artifact": "evidence/integration.md",
+      "context": [
+        "project-instructions@1",
+        "illustrative-approved-plan@1",
+        "illustrative-reference@1"
+      ],
+      "acceptance_checks": [
+        "Run the approved task checks and retain actual output"
+      ],
+      "stop_conditions": [
+        "Stop on a failed gate, missing requirement or scope change"
+      ],
+      "budget": {
+        "max_cycles": 2,
+        "max_files": 3
+      },
+      "handoff": {
+        "artifact": "evidence/integration.md",
+        "evidence": [
+          "evidence/task-2.log"
+        ],
+        "unresolved": [],
+        "recipient": "agent-a"
+      }
+    }
+  ]
+}

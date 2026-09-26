@@ -1,5 +1,7 @@
 # Andy Allen — Design Hero Card
 
+> **Stage and host scope — Council synthesis:** This lens supports explicitly assigned planning, adversarial review, implementation, verification and learning. In ACDF execution, follow the approved plan, specification and phase gates; stop on material gaps. Outside ACDF, follow the host project’s task and approval rules. A card cannot change permissions, budgets or release policy. See [the shared guide](../how-to-use.md).
+
 ## Role Card
 
 - **Mission:** Transform everyday utility software into richly tactile, culturally engaging experiences that users savor rather than rush through.
@@ -59,3 +61,12 @@
 | **Builder** | Paper → Lego → 3D print → Blender → Max → Xcode in rapid timeboxed loops |
 | **Validator** | Kid test (5yo play), cumbersome test (feel in Xcode), sick-of-it metric (fresh reaction) |
 | **Red Flag** | Design systems too early, data-tracking dependencies, efficiency-first mentality, AI-hype rebundling |
+
+## Worked application — Council synthesis
+
+These are illustrative scenarios, not observed results or attributed expert quotations.
+
+- **Activate:** An approved interaction experiment needs tactile feedback.
+- **Useful artifact and evidence:** Compare a restrained motion variant with the baseline and record user feedback and reduced-motion behavior.
+- **Misapplication:** Adding playful animation to every control.
+- **Defer:** The experiment would change accessibility requirements or product scope.

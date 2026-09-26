@@ -27,15 +27,15 @@ Mental Models ──► Visualization ──► Practice ──► Reflection �
 
 ## 2. Curriculum Roadmap
 
-* **[Welcome](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/00_Welcome.md)**: What this course is and how to use it.
-* **[What is Software?](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/01_What_Is_Software.md)**: Inputs, outputs, and state explained via everyday items.
-* **[How Engineers Think](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/02_How_Engineers_Think.md)**: Decomposing complex problems into structured parts.
-* **[Problems Before Code](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/03_Problems_Before_Code.md)**: Requirements, specs, and why coding is not the first step.
-* **[Thinking With Diagrams](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/04_Thinking_With_Diagrams.md)**: Visual architecture and execution paths.
-* **[Your First Mermaid](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/05_Your_First_Mermaid.md)**: Flowcharts, symbols, and syntax-free modeling.
-* **[How AI Helps Engineers](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/06_How_AI_Helps_Engineers.md)**: The strengths, vulnerabilities, and role of AI.
-* **[Your First ACDF Project](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/07_Your_First_ACDF_Project.md)**: Walking through a tiny change lifecycle.
-* **[Hero Lenses](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/08_Hero_Lenses.md)**: Curating expert doctrines via NotebookLM.
-* **[Multi-Model Adversarial Review](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/09_Multi_Model_Adversarial_Review.md)**: Orchestrating LLMs to critique designs.
-* **[Building Real Projects](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/10_Building_Real_Projects.md)**: Scaling, debugging, and continuous improvement.
-* **[Next Steps](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/learn/11_Next_Steps.md)**: Where to go from here (framework docs, contributing).
+* **[Welcome](00_Welcome.md)**: What this course is and how to use it.
+* **[What is Software?](01_What_Is_Software.md)**: Inputs, outputs, and state explained via everyday items.
+* **[How Engineers Think](02_How_Engineers_Think.md)**: Decomposing complex problems into structured parts.
+* **[Problems Before Code](03_Problems_Before_Code.md)**: Requirements, specs, and why coding is not the first step.
+* **[Thinking With Diagrams](04_Thinking_With_Diagrams.md)**: Visual architecture and execution paths.
+* **[Your First Mermaid](05_Your_First_Mermaid.md)**: Flowcharts, symbols, and syntax-free modeling.
+* **[How AI Helps Engineers](06_How_AI_Helps_Engineers.md)**: The strengths, vulnerabilities, and role of AI.
+* **[Your First ACDF Project](07_Your_First_ACDF_Project.md)**: Walking through a tiny change lifecycle.
+* **[Hero Lenses](08_Hero_Lenses.md)**: Curating expert doctrines via NotebookLM.
+* **[Multi-Model Adversarial Review](09_Multi_Model_Adversarial_Review.md)**: Orchestrating LLMs to critique designs.
+* **[Building Real Projects](10_Building_Real_Projects.md)**: Scaling, debugging, and continuous improvement.
+* **[Next Steps](11_Next_Steps.md)**: Where to go from here (framework docs, contributing).

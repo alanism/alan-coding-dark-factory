@@ -8,3 +8,11 @@ This directory contains the public NotebookLM inventory and the extraction proce
 - [Approval policy template](../templates/APPROVAL_POLICY.md) — choose human-led or Council-led decisions and define hard stops.
 
 Use only the public share link listed in the inventory when connecting through NotebookLM MCP. Do not add private notebooks, credentials, source files, or session tokens to this repository.
+
+## V9 operation
+
+- [Migration](v9-migration.md) — compatibility and stage-aware adoption.
+- [Runbook](runbook.md) — local checks, failures, release and recovery.
+- [Learning log](learning-log.md) — observed failures and prevention.
+- [Council evaluation](../heroes/docs/evaluation.md) — comparable runs with a no-lens baseline.
+- [Source manifest](../heroes/SOURCE_MANIFEST.json) — imported card hashes and verification limits.

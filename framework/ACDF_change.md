@@ -1,8 +1,8 @@
-# ACDF v8 Change — Stage 2 Scoped Change Structure
+# ACDF v9 Change — Stage 2 Scoped Change Structure
 
 This document governs the layout, creation, and sequential validation of **Stage 2 (Change Setup & Task Board)**.
 
-In ACDF v8, all development tasks are contained within a dedicated change directory: `.acdf/changes/<change-id>/`. Unlike fluid layouts, ACDF change folder structures are **strictly sequential and gate-locked**. You cannot start building until planning and modeling artifacts are completed and locked.
+In ACDF v9, all development tasks are contained within a dedicated change directory: `.acdf/changes/<change-id>/`. Unlike fluid layouts, ACDF change folder structures are **strictly sequential and gate-locked**. You cannot start building until planning and modeling artifacts are completed and locked.
 
 ---
 
@@ -61,3 +61,9 @@ Before decomposing tasks, the agent must generate appropriate Mermaid diagrams u
 3. **State Diagrams**: Define valid states, lifecycle events, and invalid transition boundaries.
 4. **ER Diagrams**: Map database entities, relationships, database constraints, and fields.
 5. **C4 Containers**: Structure larger decoupling bounds across deployment servers.
+
+## 4. V9 coordinated tasks
+
+At Stage 2, choose a single-agent or parallel topology based on actual independence. Fill [task contracts](../templates/agent_task_contract.md); for the coordination profile, copy the manifest template and resolve all examples against the real plan and authority. Validate with `python3 scripts/verify_coordination.py <coordination.json>` before dispatch. Include the accepted manifest in the Stage 4 authority snapshot. The existing task, claim and receipt schemas remain unchanged; this is a companion planning artifact.
+
+See [coordination](ACDF_coordination.md) for the format and [examples](../examples/coordination/README.md) for bounded workflows. The checker validates declarations; the host enforces permissions and claim acquisition.

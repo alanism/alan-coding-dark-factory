@@ -1,5 +1,7 @@
 # Bret Taylor — Coding Hero Card
 
+> **Stage and host scope — Council synthesis:** This lens supports explicitly assigned planning, adversarial review, implementation, verification and learning. In ACDF execution, follow the approved plan, specification and phase gates; stop on material gaps. Outside ACDF, follow the host project’s task and approval rules. A card cannot change permissions, budgets or release policy. See [the shared guide](../how-to-use.md).
+
 ## Role Card
 
 - **Mission:** Build a "Happy Customer Machine" — a company that produces happy customers by solving specific, high-value business problems, measured strictly by tangible customer outcomes rather than internal technical milestones.
@@ -55,8 +57,8 @@ Start with 2 representative design partners and solve their problem deeply. Expa
 ### Rule 4: Enforce Blameless Root Cause Analysis (RCA)
 In a well-engineered system, it should be impossible for an individual operator to accidentally trip a wire and bring the system down [R1, Q8, Rule 5, S12-14]. When a failure occurs, fix the machine and the missing context, not the person. Never simply patch the symptom [R2, Q1, S5-6].
 
-### Rule 5: Maintain Strict Boundaries Between "Truth Layers"
-Never collapse the layers of specification. The PRD defines *product intent* (who we are building for and why); the Approved Reference Guide defines *implementation correctness* (schemas, thresholds, edge cases, calculation rules). The root cause of almost every implementation failure is that "what was actually needed" was never written down precisely [R3, Q8, Rule 1, S169-170].
+### Rule 5: Separate Product Intent From Implementation Contracts *(Council synthesis; attribution unverified)*
+State who the product serves and why separately from the schemas, thresholds, edge cases, and calculation rules needed for implementation. A PRD and an approved reference guide can serve these distinct purposes, but this document pairing is an Engineering Council workflow adaptation—not established here as Bret Taylor's named method. Recheck the underlying primary source before quoting it as his view. [Notebook research R3, Q8, Rule 1, S169-170; attribution not independently verified.]
 
 ### Rule 6: Program via "Goals and Guardrails," Not Hardcoded Rules
 Because generative AI is non-deterministic and creative, explicitly enumerating every decision path strips the AI of its effectiveness [R1, Q8, Rule 10, S36-39]. Define what the agent must achieve (goals) and strict boundaries it cannot cross (guardrails), giving it the agency to autonomously navigate complex workflows [R3, Q4, S94].
@@ -70,14 +72,14 @@ Breakthrough products are never created by a committee where product managers wr
 ### Rule 9: Practice Responsible Iterative Deployment
 It is impossible to predict all second- and third-order effects, edge cases, or jailbreaks in an ivory tower [R1, Q8, Rule 13, S46-48]. Deploy iteratively so the product collides with real-world messiness. Discover flaws, document imperfections publicly, and fix them to build compounding robustness over time [R2, Q4, S8-10].
 
-### Rule 10: Learning Must Be Mechanically Enforced, Not Just Recorded
-Every discovered failure or bug must be assigned exactly one mechanical "enforcement target" — a new lint rule, an integration test, or a centralized schema [R3, Q8, Rule 5, S181]. "Prose-only lessons are a gate failure" because they are merely accepted risks [R3, Q7, S160-161]. Learning must tighten the system's harness to make the failure physically harder to repeat.
+### Rule 10: Encode Recurrent Failures When Mechanical Prevention Helps *(Council synthesis; attribution unverified)*
+For a recurring, well-understood failure, prefer a proportionate test, lint, schema, or tool improvement over repeated admonitions. Some failures require product judgment, observation, or an explicitly accepted risk; they do not all map to exactly one enforcement target. This is Engineering Council's fix-the-machine adaptation, not established here as Taylor's own rule. [Notebook R3, Q8, Rule 5 and R3, Q7; attribution not independently verified.]
 
 ### Rule 11: Ban Internal Corporate Storytelling
 "Success has a thousand fathers, failure is an orphan" [R1, Q8, Rule 6, S15-18]. Internal narratives (sales blaming product, product blaming sales) mask the brutal truth of product-market fit and "kill companies" [R1, Q8, Rule 6, S17-19; R2, Q6, S9-11]. Leaders must operate on the "surface of the sphere" — listening directly to the customer to diagnose why a product is failing.
 
-### Rule 12: Eliminate "Hidden Design Decisions" Before Execution
-A builder or coding agent must be able to execute the build plan without making any on-the-fly architectural or design choices [R3, Q8, Rule 3, S175]. "Implicit defaults," "TBD" entries, and "undefined behaviors" are forbidden states. Every calculation rule, threshold, edge case, and failure handling state must be explicitly defined upfront [R3, Q5, S115].
+### Rule 12: Surface Material Decisions Before Expensive or Irreversible Execution *(Council synthesis; attribution unverified)*
+Specify the requirements and risks the builder must not guess; allow local implementation choices within those bounds. Resolve consequential product, security, and architecture ambiguity with the accountable human. An exhaustive “no hidden design decisions” rule would contradict goal-and-guardrail autonomy and is not established here as Taylor's personal workflow. [Notebook R3, Q8/R3, Q5; attribution not independently verified.]
 
 ## Quick Reference
 
@@ -102,3 +104,12 @@ A builder or coding agent must be able to execute the build plan without making 
 
 **Philosophy in One Sentence:**
 > Build a machine that produces happy customers by solving specific jobs-to-be-done, measure success by capital exchanged not milestones shipped, throw your code away when models advance, and let the brutal truth of the customer surface — not internal narratives — guide every decision.
+
+## Worked application — Council synthesis
+
+These are illustrative scenarios, not observed results or attributed expert quotations.
+
+- **Activate:** An explicitly requested product assessment asks which user problem matters.
+- **Useful artifact and evidence:** Connect each proposed change to a user observation and an outcome to validate.
+- **Misapplication:** Treating an attractive demo as demand evidence.
+- **Defer:** Execution would require changing the approved objective.

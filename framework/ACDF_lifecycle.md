@@ -1,6 +1,6 @@
-# ACDF v8 Lifecycle — Gated Sequential Stages
+# ACDF v9 Lifecycle — Gated Sequential Stages
 
-This document defines the sequential stages of the ACDF v8 engineering lifecycle. Stages are execution milestones. Transitioning between stages requires binary verification of inputs and outputs. No phase gates can be bypassed.
+This document defines the sequential stages of the ACDF v9 engineering lifecycle. Stages are execution milestones. Transitioning between stages requires binary verification of inputs and outputs. No phase gates can be bypassed. Independent tasks may run concurrently within the currently unlocked stage when the approved dependency graph allows it. Agents entering execution verify the completed upstream handoff rather than repeating upstream work. Standalone council use follows the host workflow instead of imposing these stages.
 
 ---
 
@@ -32,8 +32,8 @@ This document defines the sequential stages of the ACDF v8 engineering lifecycle
 
 ### Stage 2: Change Setup & Tasking
 * **Inputs**: Stage 0.5 Models and Stage 1 Reference Guide (`.acdf/reference/guide.md`).
-* **Outputs**: `.acdf/changes/<change-id>/` directory containing `proposal.md`, `design.md`, and `tasks.md`.
-* **Binary Gate**: Topological sort of tasks is resolved. Every task has a whitelisted `allowed_files` array and a designated `binary_gate` test command.
+* **Outputs**: `.acdf/changes/<change-id>/` directory containing `proposal.md`, `design.md`, and `tasks.md`, plus task contracts and a coordination manifest when using the v9 coordination profile.
+* **Binary Gate**: Topological sort of tasks is resolved. Every task has a whitelisted `allowed_files` array and a designated `binary_gate` test command. Coordinated lanes also declare role/lens, ownership, workspace, context, budget, evidence and integration owner; validate their manifest before dispatch.
 * **Evidence**: Successful JSON validation of `change.json` metadata against `change.schema.json`.
 * **Stop Conditions**: A task requires modifying a file declared in `forbidden-files.md`.
 * **Next Unlock**: Stage 3 (Adversarial Review).
@@ -56,8 +56,8 @@ This document defines the sequential stages of the ACDF v8 engineering lifecycle
 
 ### Stage 5: Bounded Implementation
 * **Inputs**: Locked snapshot, claimed task from `tasks.md`.
-* **Outputs**: Code diff in whitelisted allowed files, task claim lockfile `.acdf/claims/<task-id>.<agent-id>.json`, and entry in `.acdf/state.log`.
-* **Binary Gate**: Claim file matches the active schema. Bounded loop runs under budget (max 2 cycles, max 3 files edited).
+* **Outputs**: Code diff in whitelisted allowed files, task claim lockfile `.acdf/changes/<change-id>/claims/<task-id>.<agent-id>.json`, and entry in `.acdf/changes/<change-id>/state-log.ndjson`.
+* **Binary Gate**: Claim file matches the active schema. Bounded loop runs under budget (default 2 cycles, hard maximum 5 only with recorded approval, max 3 files edited).
 * **Evidence**: File writes restricted to whitelisted zones. Write events appended to the audit NDJSON log.
 * **Stop Conditions**: Implementation requires scope expansion, touching forbidden files, or loop budget overrun.
 * **Next Unlock**: Stage 6 (Binary Verification).
@@ -79,7 +79,7 @@ This document defines the sequential stages of the ACDF v8 engineering lifecycle
 * **Next Unlock**: Stage 7 (Stabilization).
 
 ### Stage 7: Stabilization & Runbook
-* **Inputs**: All tasks marked DONE, verify reports.
+* **Inputs**: All tasks marked DONE, task receipts and verify reports, and checks run against the combined artifact by the named integrator. Individual lane passes alone do not establish integration success.
 * **Outputs**: `.acdf/changes/<change-id>/RUNBOOK.md` detailing cold-start deployment, configuration, and rollback.
 * **Binary Gate**: A clean agent environment can successfully deploy, boot, and verify the app using only the runbook.
 * **Evidence**: Exit 0 on runbook validation checks.
@@ -88,7 +88,7 @@ This document defines the sequential stages of the ACDF v8 engineering lifecycle
 
 ### Stage 8: Retrospective
 * **Inputs**: Completed change container, receipts, and ledger log.
-* **Outputs**: `.acdf/changes/<change-id>/retrospective.md` containing learning cards.
+* **Outputs**: `.acdf/changes/<change-id>/retrospective.md` containing learning cards, actual role/lens/context records, and links from failures to prevention evidence. Do not claim lens or swarm gains without comparable runs.
 * **Binary Gate**: At least one static enforcement check (lint check, AST validator, or unit check) is added to the active Reference Guide to prevent recurrence of any observed failures.
 * **Evidence**: Delta sync commit merging change specs into project specifications and archiving the change container to `.acdf/archive/`.
 * **Stop Conditions**: Failure logs contain unresolved bugs or no static prevention rules are written.

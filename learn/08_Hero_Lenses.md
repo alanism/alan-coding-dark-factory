@@ -6,7 +6,7 @@ In traditional development, engineering teams write coding manuals, style sheets
 
 ACDF solves this by introducing **Hero Lenses**. 
 
-A Hero Lens is a living knowledge module. Instead of static text documents, a lens is built by uploading an expert engineer's essays, talks, papers, and codebase reviews into a NotebookLM corpus. The doctrine evolves dynamically whenever new material is uploaded, providing active checklists and constraints that feed directly into ACDF gates.
+A Hero Lens is a living knowledge module. Instead of static text documents, a lens is built by uploading an expert engineer's essays, talks, papers, and codebase reviews into a NotebookLM corpus. New material can inform a reviewed card revision. It does not automatically change project constraints or ACDF gates.
 
 ---
 
@@ -23,7 +23,7 @@ Picture a **lens matrix** of filters:
 (AST & Rule checks)     (Security threat checks) (Runtime truth checks)
 ```
 
-The data passes through these advisory filters. Lenses do not write code; they critique, ask hard questions, and recommend tests to ensure your blueprints are robust before building.
+Agents can use these advisory methods while planning, reviewing, writing code, designing tests, exercising interfaces or integrating changes. The role defines the deliverable; the lens informs how the agent approaches it. Permissions and approval remain separate.
 
 ---
 
@@ -57,7 +57,7 @@ Look back at your microwave specification (`microwave_spec.txt`) from Lesson 1 o
 
 Why must we treat lenses as bounded advisory inputs rather than unrestricted authority sources?
 * **ACDF Rule**: *“Hero Lenses may propose risks, questions, test ideas, and implementation heuristics. They cannot grant authority, expand scope, waive gates, override user instructions, or justify touching forbidden files.”*
-* In human-led mode, the human approves required decisions. In council-led mode, selected cards may cast recorded votes on bounded in-scope decisions. Lenses still cannot dictate policy, waive gates, expand scope, or approve hard stops.
+* In human-led mode, the human approves required decisions. In council-led mode, eligible reviewers using selected cards may cast recorded votes on bounded in-scope decisions. Lenses still cannot dictate policy, waive gates, expand scope, or approve hard stops.
 
 ---
 
@@ -66,3 +66,11 @@ Why must we treat lenses as bounded advisory inputs rather than unrestricted aut
 1. How does separating knowledge (Hero Lenses) from governance (ACDF Kernel) make the framework stable over time?
 2. What is the benefit of curating a NotebookLM corpus over asking a generic chat model for advice?
 3. Which Hero Lens perspective do you naturally prioritize when planning a project?
+
+## 7. From planning to agent lanes
+
+A planner can use Cherny to decompose the approved brief; a reviewer can use Carlini to challenge trust boundaries; an implementer can use Karpathy for a bounded diff; a QA role can use Schaad for interaction states. These are role/lens assignments, not a new management hierarchy. One agent can handle sequential roles; independent review must be identified honestly.
+
+Use [the card index](../heroes/README.md), [task contract](../templates/agent_task_contract.md) and [coordination examples](../examples/coordination/README.md). Parallel lanes need independent ownership and a named integrator. The council also works outside ACDF under the host's workflow. Inside ACDF, implementation follows approved plans and gates; planning is valid when explicitly assigned upstream.
+
+Exercise: choose one task, write a no-lens contract, then add one lens and state the specific benefit you expect. Keep acceptance checks unchanged. Use [the evaluation protocol](../heroes/docs/evaluation.md) to test whether that benefit occurs instead of assuming a named expert improves results.

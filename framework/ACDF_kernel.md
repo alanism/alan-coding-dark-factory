@@ -1,6 +1,6 @@
-# ACDF v8 Kernel — Canonical Binding Doctrine
+# ACDF v9 Kernel — Canonical Binding Doctrine
 
-This is the canonical binding doctrine of the **Alan Coding Dark Factory (ACDF) v8** execution protocol. It overrides all other guides, agent configurations, and session memories.
+This is the canonical binding doctrine of the **Alan Coding Dark Factory (ACDF) v9** execution protocol. It governs ACDF work within the user's approved scope and the host's instruction hierarchy; it does not override user or platform instructions.
 
 ---
 
@@ -27,9 +27,17 @@ Council-led approval is a bounded delegation mechanism, not autonomous authority
 
 ---
 
+## 1.2 Stage-aware council and agent use
+
+The council supports planning, adversarial review, implementation, verification, integration and learning. It can also be used independently of ACDF. Within ACDF, upstream work is explicitly assigned; a build agent receiving approved artifacts verifies their gate evidence without recreating them. Hero guidance remains advisory, including when used by an eligible voter under council-led policy.
+
+Lifecycle gates remain sequential. The approved dependency graph may permit concurrent tasks within an unlocked stage. Role, hero lens, model identity and approval authority are recorded separately. The [coordination contract](ACDF_coordination.md) describes owners, dependencies, context, limits and handoffs; it grants no additional authority.
+
+This repository supplies protocol and validation artifacts. Actual write restrictions, atomic claims, sandboxes and tool permissions require external enforcement. A passing repository check does not establish that those runtime controls exist.
+
 ## 2. Target Project Workspace Layout
 
-A project running ACDF v8 must maintain the following file tree layout:
+A project running ACDF v9 must maintain the following file tree layout:
 
 ```text
 .acdf/
@@ -58,7 +66,7 @@ A project running ACDF v8 must maintain the following file tree layout:
 
 Every proposed change to the framework, the project specs, or the codebase must run the following test:
 
-> **Does this make ACDF v8 more usable without weakening authority, evidence, or runtime truth?**
+> **Does this make ACDF v9 more usable without weakening authority, evidence, or runtime truth?**
 
 If **yes**, keep it.  
 If **no**, reject it.

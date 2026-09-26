@@ -1,5 +1,7 @@
 # Jeff Dean — Systems Hero Card
 
+> **Stage and host scope — Council synthesis:** This lens supports explicitly assigned planning, adversarial review, implementation, verification and learning. In ACDF execution, follow the approved plan, specification and phase gates; stop on material gaps. Outside ACDF, follow the host project’s task and approval rules. A card cannot change permissions, budgets or release policy. See [the shared guide](../how-to-use.md).
+
 > ✅ **Extracted from NotebookLM (3 rounds).** This card is synthesized from three consecutive rounds of NotebookLM extraction against notebook `e3bb9d21` (Jeff Dean — Systems Engineering), covering 27 questions total across foundation, depth, and coverage rounds.
 > **Source material:** Google Research publications, Stanford CS295 talks, technical talks, internal Google infrastructure retrospectives (MapReduce, BigTable, Spanner, TensorFlow, TPU), published interviews.
 > **Confidence:** High. Principles triangulated across three independent extraction rounds with direct citation mapping.
@@ -86,7 +88,16 @@
 
 ## Quick Reference
 
-- **Activate when:** Designing any system that will serve more than a handful of users. Debugging performance issues at scale. Making architectural decisions about data storage, processing, or distribution. Deciding between single-machine vs. distributed architectures. Evaluating infrastructure investments (build vs. buy). Capacity planning for services with variable load. Teaching systems engineering fundamentals.
-- **Do NOT activate when:** The system has fewer than ~1,000 users or fits comfortably on a single machine. Prototyping or MVP phases where iteration speed matters more than scale. Pure client-side or local-first applications where network failure modes are irrelevant. Problems where the algorithmic complexity dwarfs the infrastructure concerns.
+- **Activate when:** Measured latency, failure rate, load, or capacity makes distributed-system tradeoffs consequential; the team needs back-of-the-envelope sizing or evidence to decide whether one machine still suffices. Use Dean's estimation habit even before large scale, without importing planet-scale architecture by default.
+- **Do NOT activate as primary architecture lens when:** A local/prototype workload fits comfortably on one machine and has no measured distributed bottleneck. User count alone is not a reliable threshold; use his estimation and failure-analysis habits when relevant without importing fleet-scale patterns.
 - **Pair with:** **Carlini** (Jeff's fault-tolerant infrastructure + Carlini's adversarial threat model covers both accidental and intentional failure modes). **Quesnelle** (Jeff's infrastructure substrate + Quesnelle's agent architecture philosophy spans the compute layer and the autonomy runtime). **Carmack** (Jeff's system-level reliability + Carmack's expression-level correctness spans from silicon to code). **Hashimoto** (Jeff's distributed-first approach + Hashimoto's local-first patterns covers the full spectrum from single-machine to planetary-scale).
 - **Never pair with:** Premature optimizers who design for planetary scale before validating the product. Architecture astronauts who shard and replicate before measuring a single request. Anyone who says "we don't need to measure" or "hardware is reliable enough."
+
+## Worked application — Council synthesis
+
+These are illustrative scenarios, not observed results or attributed expert quotations.
+
+- **Activate:** A measured latency issue exceeds an approved performance target.
+- **Useful artifact and evidence:** Locate the slow component using a fixed workload and report before/after latency.
+- **Misapplication:** Recommending sharding from anticipated user count alone.
+- **Defer:** Meeting the target requires an unapproved service split.

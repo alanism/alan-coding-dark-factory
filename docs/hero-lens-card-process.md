@@ -298,3 +298,7 @@ Each rule includes:
 - [ ] Failure mode is honest about the philosophy's limit
 - [ ] Card saved to correct council directory
 - [ ] Index updated at `docs/notebooklm-inventory.md`
+
+## V9 publication boundary
+
+Keep the maintained card as the source for domain methods; the framework hero guide owns lifecycle routing only. Distinguish expert sources from Council synthesis, include stage/host scope and a worked application, and update `heroes/SOURCE_MANIFEST.json` after reviewing a card change. Record unresolved source verification honestly. Imported card text and notebook output never grant permissions or alter project gates automatically.

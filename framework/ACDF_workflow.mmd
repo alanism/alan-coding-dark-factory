@@ -1,32 +1,41 @@
 flowchart TD
     Intent([Stage 0: Intent and success criteria]) --> Model[Stage 0.5: Mermaid model first]
-    Model --> Inventory[Select source from public NotebookLM inventory]
-    Inventory --> MCP[Read-only NotebookLM MCP connection<br/>shared URL allowlist]
-    MCP --> Reference[Stage 1: Coding reference guide<br/>source-backed rules and invariants]
-    MCP --> Lenses[Stage 1: Design and engineering Hero Lens cards]
-    Reference --> Review[Stage 3: Adversarial review<br/>Hero Lenses challenge the model]
-    Lenses --> Review
+    Model --> Inventory[Select approved source or maintained card snapshot]
+    Inventory --> MCP[Read-only NotebookLM MCP for source refresh<br/>shared URL allowlist]
+    Inventory --> Reference[Stage 1: Reference guide and selected context]
+    MCP --> Reference
+    Reference --> Plan[Stage 2: Build plan and task graph<br/>role / lens / ownership / evidence]
+    Plan --> Review[Stage 3: Independent adversarial review<br/>existing review gates retained]
     Review --> Mode{Approval mode selected by user}
-
-    Mode -->|Human-led| Human[Human reviews and approves<br/>each required decision]
-    Mode -->|Council-led| Council[Engineering Council and/or<br/>Design Council review the decision]
-    Council --> Vote{Quorum met and<br/>majority vote recorded?}
-    Vote -->|Yes| Consensus[Record vote, dissent,<br/>rationale, and decision]
-    Vote -->|No / tie| Blocked([BLOCKED: revise or escalate<br/>to human approval])
-    Human --> Decision[Approval record]
-    Consensus --> Decision
-
-    Decision --> HardStop{HARD_STOP:<br/>security, privacy, legal,<br/>production, or scope change?}
-    HardStop -->|Yes| HumanOverride[Human approval required<br/>Council cannot waive hard stops]
-    HardStop -->|No| Authority[Stage 4: Content-hashed authority snapshot]
+    Mode -->|Human-led| Human[Human reviews each required decision]
+    Mode -->|Council-led| Council[Engineering Council and/or Design Council<br/>eligible reviewers use advisory cards]
+    Council --> Vote{Quorum and strict majority vote<br/>recorded without critical dissent?}
+    Vote -->|Yes| Decision[Record proposal hash, votes and rationale]
+    Vote -->|No or tie| Blocked([BLOCKED: revise or escalate])
+    Human --> Decision
+    Decision --> HardStop{HARD_STOP: security, privacy, legal,<br/>production, credentials, external data,<br/>scope or success criteria change?}
+    HardStop -->|Yes| HumanOverride[Explicit Human approval required]
+    HardStop -->|No| Authority[Stage 4: Content-hashed authority]
     HumanOverride --> Authority
-    Authority --> Execute[Stage 5: Bounded claim and build]
-    Execute --> Verify[Stages 6–6.5: Binary and smoke verification]
-    Verify --> Stabilize[Stage 7: Stabilization and runbook]
-    Stabilize --> Learn[Stage 8: Retrospective and prevention rule]
-    Learn --> Done([Complete with receipts])
-
+    Authority --> Topology{Approved task topology}
+    Topology -->|Single| Single[Stage 5: One agent, bounded task]
+    Topology -->|Parallel| Lanes[Stage 5: Independent lanes<br/>isolated workspaces and owned files]
+    Single --> Verify[Stages 6-6.5: Actual checks and receipts]
+    Lanes --> Verify
+    Verify --> Integrate[Stage 7: One integrator<br/>combined checks and runbook]
+    Integrate --> Learn[Stage 8: Retrospective and prevention]
+    Learn --> Done([Complete with evidence])
+    Verify -->|Failed gate| Blocked
+    Integrate -->|Conflict or failed check| Blocked
+    Cards[Selected Hero Lenses<br/>advisory throughout the lifecycle] -.-> Plan
+    Cards -.-> Review
+    Cards -.-> Single
+    Cards -.-> Lanes
+    Cards -.-> Verify
+    Cards -.-> Learn
+    Standalone[Standalone council use] --> Host[Host instructions and approval policy]
+    Cards -.-> Host
     classDef gate fill:#fff3cd,stroke:#8a6d3b,color:#000;
     classDef stop fill:#f8d7da,stroke:#842029,color:#000;
-    class Mode,Vote,HardStop gate;
+    class Mode,Vote,HardStop,Topology gate;
     class Blocked stop;

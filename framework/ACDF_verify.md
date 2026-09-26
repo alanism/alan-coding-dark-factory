@@ -1,4 +1,4 @@
-# ACDF v8 Verification — Gates & Smoke Testing
+# ACDF v9 Verification — Gates & Smoke Testing
 
 This document governs **Stage 6 (Verification)** and **Stage 6.5 (Live Smoke Testing)**.
 
@@ -31,3 +31,9 @@ Unit tests run in simulated node processes. Real browser bugs (token isolation, 
 
 ### 2.2 Smoke Report Format
 Save E2E results to `.acdf/changes/<change-id>/smoke_report.md`. The report must list all tested paths, verified console warnings, and relative paths to screenshots stored under `.acdf/changes/<change-id>/evidence/`.
+
+## 3. V9 integration and validation scope
+
+Run required checks on each lane's artifact and again on the combined change at the integration boundary. Record the actual revision, commands, results, missing coverage and integration owner. Do not label sequential self-review independent or count hero labels as additional voters.
+
+For this framework repository, `python3 scripts/verify_acdf_repo.py` performs structural checks plus v9 documentation and coordination checks. `python3 -m unittest discover -s tests -v` exercises negative cases. These are not a full JSON Schema implementation, a runtime sandbox test, a Mermaid renderer or a security certification. Target projects still need their own approved build, type, lint, test and smoke gates.

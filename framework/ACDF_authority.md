@@ -1,4 +1,4 @@
-# ACDF v8 Authority — Content-Hashed Snapshots
+# ACDF v9 Authority — Content-Hashed Snapshots
 
 This document defines how execution boundaries are locked and verified in **Stage 4 (Execution Readiness)** using content-hashed snapshots.
 
@@ -46,3 +46,7 @@ for filepath, expected_hash in authority_snapshots.items():
 ```
 
 If a mismatch is found, the agent must STOP immediately, mark the task as **BLOCKED** in the ledger, and notify the user. The snapshot can only be regenerated with explicit human confirmation.
+
+## 4. V9 coordination companion
+
+When adopting the v9 coordination profile, include the accepted manifest and task contracts among the Stage 4 snapshot inputs. Keep operational status and mutable evidence separate from immutable plan inputs. The existing authority schema and approval arithmetic remain unchanged. A coordination-check pass cannot create authority, validate a vote or reseal a snapshot. Real plan changes still require the existing explicit approval.

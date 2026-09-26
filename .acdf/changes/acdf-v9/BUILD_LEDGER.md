@@ -1,0 +1,33 @@
+# V9 maintenance ledger
+
+- Clean upstream baseline: PASS, evidence/baseline.log. Original checkout left unchanged.
+- Approved plan and exact product file scope recorded. No independent reviews, live agents, or council votes fabricated.
+- Bounded edit batch: README.md, framework/ACDF_hero_lenses.md, AGENTS.md.
+- Bounded edit batch: framework/ACDF_kernel.md, framework/ACDF_lifecycle.md, framework/ACDF_workflow.mmd.
+- Bounded edit batch: framework/ACDF_execution.md, framework/ACDF_multimodel_review.md, framework/ACDF_change.md.
+- Bounded edit batch: heroes/Engineering_Council/andrej_karpathy_coding_hero.md, heroes/Design_Council/andy_allen_design_hero.md, heroes/Engineering_Council/boris_cherny_coding_hero.md.
+- Bounded edit batch: heroes/Engineering_Council/bret_taylor_coding_hero.md, heroes/Engineering_Council/david_heinemeier_hansson_coding_hero.md, heroes/Engineering_Council/diogo_almeida_jev_coding_hero.md.
+- Bounded edit batch: heroes/Engineering_Council/jeff_dean_coding_hero.md, heroes/Engineering_Council/jeffrey_quesnelle_coding_hero.md, heroes/Engineering_Council/john_carmack_coding_hero.md.
+- Bounded edit batch: heroes/Engineering_Council/landon_carter_palantir_coding_hero.md, heroes/Engineering_Council/mitchell_hashimoto_coding_hero.md, heroes/Engineering_Council/nicholas_carlini_coding_hero.md.
+- Bounded edit batch: heroes/Engineering_Council/raphael_schaad_coding_hero.md, heroes/Engineering_Council/ryan_lopopolo_coding_hero.md, heroes/Design_Council/ryo_lu_design_hero.md.
+- Bounded edit batch: heroes/Engineering_Council/simon_willison_coding_hero.md, heroes/Engineering_Council/thariq_shihipar_coding_hero.md.
+- Bounded edit batch: heroes/how-to-use.md, heroes/README.md, heroes/references/slide-layout-rubric.md.
+- Bounded edit batch: heroes/docs/evaluation.md, heroes/docs/role-examples.md, heroes/docs/runbook.md.
+- Bounded edit batch: heroes/docs/learning-log.md.
+- Bounded edit batch: heroes/SOURCE_MANIFEST.json.
+- Bounded edit batch: framework/ACDF_coordination.md, templates/agent_task_contract.md, examples/coordination/README.md.
+- Bounded edit batch: examples/coordination/single.json, examples/coordination/parallel.json, templates/.acdf/changes/_template/coordination.json.
+- Bounded edit batch: tests/test_coordination.py.
+- Bounded edit batch: scripts/verify_coordination.py.
+- Bounded edit batch: framework/ACDF_authority.md, framework/ACDF_multimodel_review.md, framework/ACDF_reference.md.
+- Bounded edit batch: framework/ACDF_verify.md, learn/07_Your_First_ACDF_Project.md, learn/README.md.
+- Bounded edit batch: learn/08_Hero_Lenses.md, framework/ACDF_authority.md, framework/ACDF_verify.md.
+- Bounded edit batch: framework/ACDF_coordination.md.
+- Bounded edit batch: docs/v9-migration.md, docs/runbook.md, docs/learning-log.md.
+- Bounded edit batch: docs/README.md, docs/hero-lens-card-process.md, templates/.acdf/changes/_template/tasks.md.
+- Bounded edit batch: tests/test_v9_docs.py.
+- Bounded edit batch: scripts/verify_v9_docs.py.
+- Bounded edit batch: scripts/verify_acdf_repo.py.
+- Red/green coordination validation: initial tests failed because `scripts/verify_coordination.py` was absent; implementation added the validator and the full 19-test suite now passes.
+- Final checks: `python3 scripts/verify_acdf_repo.py` PASS; `python3 -m unittest discover -s tests -v` PASS (19 tests); `python3 scripts/verify_v9_docs.py` PASS; both coordination fixtures PASS; `git diff --check` PASS.
+- Schema stability: existing five JSON schema files were not modified. No runtime sandbox, atomic claim service, agent launcher, deployment, source re-verification or performance benchmark was performed.

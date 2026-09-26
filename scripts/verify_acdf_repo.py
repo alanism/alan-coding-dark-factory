@@ -3,6 +3,7 @@ import os
 import sys
 import json
 import re
+from verify_v9_docs import validate_repo
 
 # Root path of the repository
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -161,7 +162,7 @@ def test_example_validation():
         for task in change_data["tasks"]:
             assert "id" in task, "Task missing id"
             assert "binary_gate" in task, "Task missing binary_gate"
-        log_success("change.json fits change schema constraints")
+        log_success("change.json selected example fields pass")
     except Exception as e:
         log_failure(f"change.json validation failure: {e}")
         passed = False
@@ -176,7 +177,7 @@ def test_example_validation():
         assert "allowed_files" in auth_data["write_rules"], "Missing allowed_files"
         assert "approval" in auth_data, "Missing approval record"
         assert auth_data["approval"]["decision"] in ["APPROVED", "BLOCKED"], "Invalid approval decision"
-        log_success("authority.json fits authority schema constraints")
+        log_success("authority.json selected example authority fields pass")
     except Exception as e:
         log_failure(f"authority.json validation failure: {e}")
         passed = False
@@ -187,7 +188,7 @@ def test_example_validation():
             claim_data = json.load(f)
         assert "taskId" in claim_data, "Missing taskId"
         assert "agentId" in claim_data, "Missing agentId"
-        log_success("claim JSON fits claim schema constraints")
+        log_success("claim JSON selected example claim fields pass")
     except Exception as e:
         log_failure(f"claim JSON validation failure: {e}")
         passed = False
@@ -213,7 +214,7 @@ def test_example_validation():
         assert "status" in receipt_data, "Missing status"
         assert "verification_command" in receipt_data, "Missing verification_command"
         assert "prevention" in receipt_data, "Missing prevention"
-        log_success("receipt.json fits receipt schema constraints")
+        log_success("receipt.json selected example receipt fields pass")
     except Exception as e:
         log_failure(f"receipt.json validation failure: {e}")
         passed = False
@@ -299,20 +300,30 @@ def test_lifecycle_gates():
             
     return passed
 
+def test_v9_contracts():
+    errors = validate_repo()
+    for error in errors:
+        log_failure(error)
+    if not errors:
+        log_success("V9 documentation, provenance, routing and coordination checks pass.")
+    return not errors
+
+
 def main():
-    print("--- Starting ACDF v8 Repo Integrity Validation ---")
+    print("--- Starting ACDF v9 Repo Integrity Validation ---")
     results = [
         test_file_existence(),
         test_json_schemas(),
         test_example_validation(),
         test_forbidden_references(),
         test_lifecycle_gates(),
-        test_workflow_contract()
+        test_workflow_contract(),
+        test_v9_contracts()
     ]
     
     print("-------------------------------------------------")
     if all(results):
-        print("\033[92m[SUCCESS]\033[0m ACDF v8 standalone repository is 100% valid and secure.")
+        print("\033[92m[SUCCESS]\033[0m ACDF v9 repository structure and declared contracts pass the implemented checks; runtime security is not certified.")
         sys.exit(0)
     else:
         print("\033[91m[FAILURE]\033[0m Repository integrity tests failed.")

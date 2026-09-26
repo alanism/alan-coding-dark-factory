@@ -4,7 +4,7 @@
 
 Now we will put the pieces together. We will walk through a complete codebase change lifecycle. 
 
-Instead of writing code directly, we will follow ACDF v8's stages. Our target task is simple: **Add a configuration setting that toggles the language of our application from English to Vietnamese.**
+Instead of writing code directly, we will follow ACDF v9's stages. Our target task is simple: **Add a configuration setting that toggles the language of our application from English to Vietnamese.**
 
 Even for this tiny task, we run the OS protocol to build habits of discipline.
 
@@ -41,7 +41,7 @@ flowchart TD
 ## 4. Build Something: Run a Tiny ACDF Change
 
 We will use the golden example in this repository to run a mock change:
-1. Navigate to [examples/tiny-change/](file:///Users/alannguyen/Documents/Vibe%20Code/alan-coding-dark-factory/examples/tiny-change/).
+1. Navigate to [examples/tiny-change/](../examples/tiny-change).
 2. Look at the files:
    - `proposal.md`: What problem are we solving?
    - `models/architecture.mmd`: The Mermaid flow.

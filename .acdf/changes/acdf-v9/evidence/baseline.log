@@ -1,0 +1,106 @@
+--- Starting ACDF v8 Repo Integrity Validation ---
+[92m[PASS][0m File exists: README.md
+[92m[PASS][0m File exists: AGENTS.md
+[92m[PASS][0m File exists: framework/ACDF_kernel.md
+[92m[PASS][0m File exists: framework/ACDF_lifecycle.md
+[92m[PASS][0m File exists: framework/ACDF_authority.md
+[92m[PASS][0m File exists: framework/ACDF_execution.md
+[92m[PASS][0m File exists: framework/ACDF_verify.md
+[92m[PASS][0m File exists: framework/ACDF_hero_lenses.md
+[92m[PASS][0m File exists: schemas/change.schema.json
+[92m[PASS][0m File exists: schemas/authority.schema.json
+[92m[PASS][0m File exists: schemas/claim.schema.json
+[92m[PASS][0m File exists: schemas/state-log.schema.json
+[92m[PASS][0m File exists: schemas/receipt.schema.json
+[92m[PASS][0m File exists: templates/.acdf/reference/guide.md
+[92m[PASS][0m File exists: templates/.acdf/reference/trust-zones.md
+[92m[PASS][0m File exists: templates/.acdf/reference/forbidden-files.md
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/proposal.md
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/design.md
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/tasks.md
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/authority.json
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/models/architecture.mmd
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/claims/.gitkeep
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/state-log.ndjson
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/evidence/.gitkeep
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/receipts/.gitkeep
+[92m[PASS][0m File exists: templates/.acdf/changes/_template/retrospective.md
+[92m[PASS][0m File exists: examples/tiny-change/change.json
+[92m[PASS][0m File exists: examples/tiny-change/models/architecture.mmd
+[92m[PASS][0m File exists: examples/tiny-change/proposal.md
+[92m[PASS][0m File exists: examples/tiny-change/design.md
+[92m[PASS][0m File exists: examples/tiny-change/tasks.md
+[92m[PASS][0m File exists: examples/tiny-change/authority.json
+[92m[PASS][0m File exists: examples/tiny-change/claims/task-1.agent-1.json
+[92m[PASS][0m File exists: examples/tiny-change/state-log.ndjson
+[92m[PASS][0m File exists: examples/tiny-change/evidence/task-1_verify.log
+[92m[PASS][0m File exists: examples/tiny-change/receipts/task-1.json
+[92m[PASS][0m File exists: examples/tiny-change/retrospective.md
+[92m[PASS][0m File exists: examples/tiny-change/config.txt
+[92m[PASS][0m File exists: framework/ACDF_multimodel_review.md
+[92m[PASS][0m File exists: framework/ACDF_reference.md
+[92m[PASS][0m File exists: framework/ACDF_workflow.mmd
+[92m[PASS][0m File exists: docs/README.md
+[92m[PASS][0m File exists: docs/notebooklm-inventory.md
+[92m[PASS][0m File exists: docs/coding-reference-guide-process.md
+[92m[PASS][0m File exists: docs/hero-lens-card-process.md
+[92m[PASS][0m File exists: templates/APPROVAL_POLICY.md
+[92m[PASS][0m File exists: heroes/README.md
+[92m[PASS][0m File exists: heroes/Design_Council/andy_allen_design_hero.md
+[92m[PASS][0m File exists: heroes/Design_Council/ryo_lu_design_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/andrej_karpathy_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/boris_cherny_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/bret_taylor_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/jeffrey_quesnelle_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/jeff_dean_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/john_carmack_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/mitchell_hashimoto_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/nicholas_carlini_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/raphael_schaad_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/ryan_lopopolo_coding_hero.md
+[92m[PASS][0m File exists: heroes/Engineering_Council/simon_willison_coding_hero.md
+[92m[PASS][0m File exists: templates/review_prompts/round_1_independent_review.md
+[92m[PASS][0m File exists: templates/review_prompts/round_2_cross_examination.md
+[92m[PASS][0m File exists: templates/review_prompts/round_3_final_risk_register.md
+[92m[PASS][0m File exists: templates/review_prompts/synthesis_prompt.md
+[92m[PASS][0m File exists: templates/review_prompts/notebooklm_9_questions.md
+[92m[PASS][0m File exists: templates/review_prompts/council_decision.md
+[92m[PASS][0m File exists: learn/README.md
+[92m[PASS][0m File exists: learn/00_Welcome.md
+[92m[PASS][0m File exists: learn/01_What_Is_Software.md
+[92m[PASS][0m File exists: learn/02_How_Engineers_Think.md
+[92m[PASS][0m File exists: learn/03_Problems_Before_Code.md
+[92m[PASS][0m File exists: learn/04_Thinking_With_Diagrams.md
+[92m[PASS][0m File exists: learn/05_Your_First_Mermaid.md
+[92m[PASS][0m File exists: learn/06_How_AI_Helps_Engineers.md
+[92m[PASS][0m File exists: learn/07_Your_First_ACDF_Project.md
+[92m[PASS][0m File exists: learn/08_Hero_Lenses.md
+[92m[PASS][0m File exists: learn/09_Multi_Model_Adversarial_Review.md
+[92m[PASS][0m File exists: learn/10_Building_Real_Projects.md
+[92m[PASS][0m File exists: learn/11_Next_Steps.md
+[92m[PASS][0m Valid schema JSON: state-log.schema.json
+[92m[PASS][0m Valid schema JSON: claim.schema.json
+[92m[PASS][0m Valid schema JSON: authority.schema.json
+[92m[PASS][0m Valid schema JSON: receipt.schema.json
+[92m[PASS][0m Valid schema JSON: change.schema.json
+[92m[PASS][0m change.json fits change schema constraints
+[92m[PASS][0m authority.json fits authority schema constraints
+[92m[PASS][0m claim JSON fits claim schema constraints
+[92m[PASS][0m state-log.ndjson validation passes
+[92m[PASS][0m receipt.json fits receipt schema constraints
+[92m[PASS][0m No forbidden terms or private project names found in repository files.
+[92m[PASS][0m Found all lifecycle stages (Stage 0 to Stage 8, including 0.5 and 6.5) in ACDF_lifecycle.md
+[92m[PASS][0m Stage 'Intent Capture' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Architectural Modeling' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Reference Guide Specification' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Change Setup & Tasking' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Adversarial Review' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Execution Readiness (Snapshot)' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Bounded Implementation' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Binary Verification' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Live Smoke Testing' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Stabilization & Runbook' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Stage 'Retrospective' has all required fields (Inputs, Outputs, Gates, Evidence, Stops, Unlocks)
+[92m[PASS][0m Canonical Mermaid workflow covers MCP, councils, approval, voting, and hard stops.
+-------------------------------------------------
+[92m[SUCCESS][0m ACDF v8 standalone repository is 100% valid and secure.
