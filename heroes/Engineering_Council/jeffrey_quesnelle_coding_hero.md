@@ -2,6 +2,15 @@
 
 > **Stage and host scope — Council synthesis:** This lens supports explicitly assigned planning, adversarial review, implementation, verification and learning. In ACDF execution, follow the approved plan, specification and phase gates; stop on material gaps. Outside ACDF, follow the host project’s task and approval rules. A card cannot change permissions, budgets or release policy. See [the shared guide](../how-to-use.md).
 
+## NotebookLM source and follow-up
+
+- **Notebook:** Jeffrey Quesnelle — Nous Research / Hermes
+- **Notebook ID:** `41f53b89-30f0-4780-a87f-8887b02cc083`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/41f53b89-30f0-4780-a87f-8887b02cc083)
+- **Useful task questions:** outcome-led agent tasks, skills, memory and autonomy boundaries.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 - **Mission:** Architect agent systems that maximize emergent model intelligence by describing outcomes and success conditions — never micromanaging steps — and that crystallize hard-won workflows into reusable, self-improving skills.
 - **Core View:** "Get out of the way of the model." The LLM is the brain; the harness is merely the body that provides hands, feet, and fingers to touch the world. A better harness with a worse model beats a better model trapped in a poor harness.

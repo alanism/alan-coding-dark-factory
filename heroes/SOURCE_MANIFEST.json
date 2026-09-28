@@ -10,188 +10,291 @@
       "source_name": "andrej_karpathy_coding_hero.md",
       "source_sha256": "657ed732a211e7d1af9e47be492b2c9915f662d007bbaec93493215b9bfa8c43",
       "path": "Engineering_Council/andrej_karpathy_coding_hero.md",
-      "shipped_sha256": "8641ea5ca07a04eda2922a457a02ca120fa5328aeafbed534e61ea8b41af51f3",
+      "shipped_sha256": "c9e9b7ef3c3337d2ce97c2f1c490b4388c1173e365476914885a73ed256e54ca",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Andrej Karpathy",
+      "notebook_id": "a8725c9a-2d68-47f8-83c2-04e305deb69c",
+      "notebook_url": "https://notebooklm.google.com/notebook/a8725c9a-2d68-47f8-83c2-04e305deb69c",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "andy_allen_design_hero.md",
       "source_sha256": "e0de22e6c8892e9aedbc6f04f2894850f3fde3634975608d96453fd9bc9595f9",
       "path": "Design_Council/andy_allen_design_hero.md",
-      "shipped_sha256": "2ee7cb8d6450735daf0e84a936fece9f5780067ced6afdb01db7689204d851de",
+      "shipped_sha256": "07d95662eab874b659fe2578a9c21853bb9f302a0fa1249510f79fbc8ea31b81",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Andy Allen — designer",
+      "notebook_id": "84bbd125-ac8d-4770-b87a-930934078933",
+      "notebook_url": "https://notebooklm.google.com/notebook/84bbd125-ac8d-4770-b87a-930934078933",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "boris_cherny_coding_hero.md",
       "source_sha256": "a8f029deeaf108f03b2aa1786b9fabb22d33063c218b149b3d2aab5c9d402d7f",
       "path": "Engineering_Council/boris_cherny_coding_hero.md",
-      "shipped_sha256": "36cb713b457436de88544cc06a7d7bf022b1c25d559f96ca10bd06da23694d1d",
+      "shipped_sha256": "a73044c4b70754e4acf335dab9d59d0944bab8650024ff752d0a75b275b81039",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Boris Cherny — Claude Code creator",
+      "notebook_id": "60888eb9-7849-430e-bdf1-eb375c580b5b",
+      "notebook_url": "https://notebooklm.google.com/notebook/60888eb9-7849-430e-bdf1-eb375c580b5b",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "bret_taylor_coding_hero.md",
       "source_sha256": "4d0b84de792edfc40e8484c172f3a9fd015ce7270549143ee14d4d016c6ed606",
       "path": "Engineering_Council/bret_taylor_coding_hero.md",
-      "shipped_sha256": "b8188bf4807f63a1fe8331c98b7fa43962be7e5e6dc86f6827793d1ff23218e2",
+      "shipped_sha256": "12863478278c9b6c2bafe5bd83db43d302f625ea31e02a8b8b0b033d0fcc69d6",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Brett Taylor",
+      "notebook_id": "b0979067-a238-4715-b4c0-7e67948ae4e4",
+      "notebook_url": "https://notebooklm.google.com/notebook/b0979067-a238-4715-b4c0-7e67948ae4e4",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "david_heinemeier_hansson_coding_hero.md",
       "source_sha256": "6332be92924e12f790e75122731ff2d706168451d5838c0ae9cedc209230755f",
       "path": "Engineering_Council/david_heinemeier_hansson_coding_hero.md",
-      "shipped_sha256": "a1100afe5c11933c917d0bb0685ca0ff39e92d0c75073f6fae634f5d396bc156",
+      "shipped_sha256": "253f70aba4eae07ccef20b900f9b96cfb8d99b3a3508ed284c8e24071e54e21e",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "DHH David Heinemeier Hansson — 37 signals / Ruby",
+      "notebook_id": "7fcf4d69-0043-4b51-bc82-15373a3bbfa9",
+      "notebook_url": "https://notebooklm.google.com/notebook/7fcf4d69-0043-4b51-bc82-15373a3bbfa9",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "diogo_almeida_jev_coding_hero.md",
       "source_sha256": "86e7989fe1b7d293cd924013cff05794092fbc1f574448404143883412db85b1",
       "path": "Engineering_Council/diogo_almeida_jev_coding_hero.md",
-      "shipped_sha256": "4d739c63338502dd8d5ec096cf262f806eb3dcf7836a390a27c0e91f04246b4d",
+      "shipped_sha256": "260459fda2e66af55a1288622e121df8d12c9af03372fff8d33bc10d26e3ada8",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Jev AI / Diogo Almeida",
+      "notebook_id": "f94e0308-b397-48f2-9123-b64cfb0c4e20",
+      "notebook_url": "https://notebooklm.google.com/notebook/f94e0308-b397-48f2-9123-b64cfb0c4e20",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "jeff_dean_coding_hero.md",
       "source_sha256": "01a0efbb199bc317d8e2fbfa6ee04e59a4ec893095e4867a4208c56068da3a02",
       "path": "Engineering_Council/jeff_dean_coding_hero.md",
-      "shipped_sha256": "33a08935f25df4e70c3a69a47fa714ef44e8aa8d76d7bd4f30f2eeb95a665a8c",
+      "shipped_sha256": "a1fad4f7aff0709ba376364e9075152dfd0c539e974dc014c5d65c8bccadc165",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Jeff Dean — Systems Engineering",
+      "notebook_id": "e3bb9d21-8361-4fbe-993b-cb8279889a0d",
+      "notebook_url": "https://notebooklm.google.com/notebook/e3bb9d21-8361-4fbe-993b-cb8279889a0d",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "jeffrey_quesnelle_coding_hero.md",
       "source_sha256": "f4d49497778d86e189e8e1e9dc4c6f51b7e8b611762bc87c4c9dc237ba0f75d2",
       "path": "Engineering_Council/jeffrey_quesnelle_coding_hero.md",
-      "shipped_sha256": "e5999bdef389713ff29f2f72f4cf05d3686e0d894eaede96a2f2734852dc4738",
+      "shipped_sha256": "a32d9260cb66c90bd70c03b3531d51f67cab07d05ee26998bd9509c6420e8d3f",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Jeffrey Quesnelle — Nous Research / Hermes",
+      "notebook_id": "41f53b89-30f0-4780-a87f-8887b02cc083",
+      "notebook_url": "https://notebooklm.google.com/notebook/41f53b89-30f0-4780-a87f-8887b02cc083",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "john_carmack_coding_hero.md",
       "source_sha256": "e16164fa5fba2e15385661a5df37dc3cefe1b71758917a1fa306a24fe5e14edf",
       "path": "Engineering_Council/john_carmack_coding_hero.md",
-      "shipped_sha256": "d85ccab1093f5af9f2e87c2234b1e403e24f5c0aa28379025e1c0f343ebe4bf3",
+      "shipped_sha256": "9125cb202d78f96c383f2f33081c919f289442db886a5b368a8c85a363aab4c8",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "John Carmack",
+      "notebook_id": "f2aa7095-cf9b-4eaa-afde-7a6a72fe6da4",
+      "notebook_url": "https://notebooklm.google.com/notebook/f2aa7095-cf9b-4eaa-afde-7a6a72fe6da4",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "landon_carter_palantir_coding_hero.md",
       "source_sha256": "8aae11296701761f84c0c91da244dccd2d3fa86d87fd67e5866aaf682ab8ad9d",
       "path": "Engineering_Council/landon_carter_palantir_coding_hero.md",
-      "shipped_sha256": "5b99a6e112655a1febe3c40f202dc94d6a4285d97b2a7d6069653f6925581202",
+      "shipped_sha256": "2263842fb466ff5ec36d6b1858139d8427bcf4307eb7b3f5788fff2b6ddfbad0",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Palantir Ontology / Landon Carter-informed",
+      "notebook_id": "786edf1e-bbf1-4e30-8a97-c60de91e3fb2",
+      "notebook_url": "https://notebooklm.google.com/notebook/786edf1e-bbf1-4e30-8a97-c60de91e3fb2",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "mitchell_hashimoto_coding_hero.md",
       "source_sha256": "5a03afe271fee8bc673d47a2eac8f395ac1c078aaefd07477334ccc25a62ce40",
       "path": "Engineering_Council/mitchell_hashimoto_coding_hero.md",
-      "shipped_sha256": "5f9630aee9db19d12f5238d8a2b6751339641c7fd65a0293ecfb46bc14487011",
+      "shipped_sha256": "46e09ce7a5e81000f542f5af7bf416a776dc4fdae217cb00bb68bea7b9757807",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Mitchell Hashimoto",
+      "notebook_id": "73aa1f39-d265-46d2-8631-f69036b76421",
+      "notebook_url": "https://notebooklm.google.com/notebook/73aa1f39-d265-46d2-8631-f69036b76421",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "nicholas_carlini_coding_hero.md",
       "source_sha256": "4fec004ec1f9d4a9aa33b87044e484689244324ddebddd8b494756a242cf5544",
       "path": "Engineering_Council/nicholas_carlini_coding_hero.md",
-      "shipped_sha256": "7cd8ae29119a02cb76bd937f8034931743a85b995f12ced8c08677784565d8f6",
+      "shipped_sha256": "d41b84d0b6e479075d95f3d47fa20ab90b57907c8e8d71901949b49b84a06d29",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Nicholas Carlini — Anthropic CyberSecurity",
+      "notebook_id": "948c3067-c093-41da-b444-7fb2ec48a485",
+      "notebook_url": "https://notebooklm.google.com/notebook/948c3067-c093-41da-b444-7fb2ec48a485",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "raphael_schaad_coding_hero.md",
       "source_sha256": "35f8324229caa9d6224944d588afc2528ced7a9b05cce568cee0b339fc64b3d2",
       "path": "Engineering_Council/raphael_schaad_coding_hero.md",
-      "shipped_sha256": "b463a55d84b52072a8540f614a9c02c0e8f6616b89c21145682e0d334254134d",
+      "shipped_sha256": "f227d4e9fcf207cc9d9fb7efd0a814b6c7c4f940fbcfc41addcc9d97477203c4",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Raphael Schaad — Cron Designer",
+      "notebook_id": "c0cd00ad-633b-4d5e-bd95-e1eb02bd8a27",
+      "notebook_url": "https://notebooklm.google.com/notebook/c0cd00ad-633b-4d5e-bd95-e1eb02bd8a27",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "ryan_lopopolo_coding_hero.md",
       "source_sha256": "6748931a7684cca937c3a8e089998ca64777fdfb0da70cf53cfc6913d59dcae7",
       "path": "Engineering_Council/ryan_lopopolo_coding_hero.md",
-      "shipped_sha256": "3f16d47ddcf16d28baa9a0dfa004c629048bee8f77746b9aabd6e86c267477ef",
+      "shipped_sha256": "0a377650e6d25a109f6b626369d83e79aae9a58788eb39805cbc94eae2101753",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Ryan Lopopolo — OpenAI Harness Engineering",
+      "notebook_id": "74e5724d-9246-49dc-a3db-d008e0cc9fc4",
+      "notebook_url": "https://notebooklm.google.com/notebook/74e5724d-9246-49dc-a3db-d008e0cc9fc4",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "ryo_lu_design_hero.md",
       "source_sha256": "7ae9e62bf40332e48764ef1a6ea6cc86f35560f869c133fdc7943fefb0293a41",
       "path": "Design_Council/ryo_lu_design_hero.md",
-      "shipped_sha256": "fd707b156f222ae2e1b8faf598f92c5365f00b17e8e4b0cec3d6a635e6324302",
+      "shipped_sha256": "d660a2dada12543dd2ed5ea30958e864a378f5b5a565d1efb16f62dc014f04a6",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Ryo Lu — cursor designer",
+      "notebook_id": "1304965a-6b23-4459-bee3-0ad478c97870",
+      "notebook_url": "https://notebooklm.google.com/notebook/1304965a-6b23-4459-bee3-0ad478c97870",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "simon_willison_coding_hero.md",
       "source_sha256": "1da42ace1c01736db1636a95dcc80588ef0fdba82261668c8d2b858a299c58d2",
       "path": "Engineering_Council/simon_willison_coding_hero.md",
-      "shipped_sha256": "a70732e358c86e1870168c2db2b45a2d80c386b4e744c3d1f3a5db9fa2fead60",
+      "shipped_sha256": "24efd0960ece22cc11c409793d8c1f29fa45bbbce7999086843c876d135917ee",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Simon Willison — Django",
+      "notebook_id": "a0ccaec4-2711-4263-a35c-3b9dca889f9a",
+      "notebook_url": "https://notebooklm.google.com/notebook/a0ccaec4-2711-4263-a35c-3b9dca889f9a",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     },
     {
       "source_name": "thariq_shihipar_coding_hero.md",
       "source_sha256": "1a0b0f8cf35d8281aa1e3e5a417d51deb1e04727c7638ec108a274dfa2cddd87",
       "path": "Engineering_Council/thariq_shihipar_coding_hero.md",
-      "shipped_sha256": "0ef89204636984415463fae92ba118d82f2b0e8cf69f681f32f1f9c0802b98a8",
+      "shipped_sha256": "fa0d3324496fbf3662ba6fa5411c82be8600557dd9d668c541603accd4380d4e",
       "adaptations": [
         "Stage-aware ACDF and standalone scope",
-        "Relative guide link"
+        "Relative guide link",
+        "NotebookLM title, ID and share link copied from the maintained inventory/source note",
+        "Task-specific follow-up angle added"
       ],
-      "primary_sources_reverified": false
+      "primary_sources_reverified": false,
+      "notebook_title": "Thariq Shihipar",
+      "notebook_id": "6b83668e-df74-4571-8aa2-6c304227b4b2",
+      "notebook_url": "https://notebooklm.google.com/notebook/6b83668e-df74-4571-8aa2-6c304227b4b2",
+      "notebook_catalog": "docs/notebooklm-inventory.md"
     }
-  ]
+  ],
+  "notebook_usage": "Open the card link or pass notebook_url to NotebookLM ask_question. Request cited, source-grounded answers. Notebook responses are advisory; sanitize inputs and check against approved specifications."
 }

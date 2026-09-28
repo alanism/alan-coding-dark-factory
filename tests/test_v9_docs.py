@@ -48,6 +48,19 @@ class DocumentationTests(unittest.TestCase):
             manifest_path.write_text(json.dumps(manifest))
             self.assertIn("duplicate manifest", "\n".join(library_errors(root)))
 
+    def test_notebook_id_and_share_link_must_match_card(self):
+        self.assertEqual(library_errors(ROOT), [])
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shutil.copytree(ROOT / "heroes", root / "heroes")
+            manifest_path = root / "heroes/SOURCE_MANIFEST.json"
+            manifest = json.loads(manifest_path.read_text())
+            manifest["cards"][0]["notebook_id"] = "00000000-0000-0000-0000-000000000000"
+            manifest_path.write_text(json.dumps(manifest))
+            errors = "\n".join(library_errors(root))
+            self.assertIn("NotebookLM link does not match", errors)
+            self.assertIn("NotebookLM source does not match", errors)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -2,6 +2,15 @@
 
 > **Stage and host scope — Council synthesis:** This lens supports explicitly assigned planning, adversarial review, implementation, verification and learning. In ACDF execution, follow the approved plan, specification and phase gates; stop on material gaps. Outside ACDF, follow the host project’s task and approval rules. A card cannot change permissions, budgets or release policy. See [the shared guide](../how-to-use.md).
 
+## NotebookLM source and follow-up
+
+- **Notebook:** Andy Allen — designer
+- **Notebook ID:** `84bbd125-ac8d-4770-b87a-930934078933`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/84bbd125-ac8d-4770-b87a-930934078933)
+- **Useful task questions:** interaction concepts, tactility, accessibility, prototype scope.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 
 - **Mission:** Transform everyday utility software into richly tactile, culturally engaging experiences that users savor rather than rush through.

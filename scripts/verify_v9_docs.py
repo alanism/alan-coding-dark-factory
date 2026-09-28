@@ -82,12 +82,23 @@ def library_errors(root):
                 errors.append(name + ": shipped hash mismatch")
             if not re.fullmatch(r"[a-f0-9]{64}", entry["source_sha256"]):
                 errors.append(name + ": invalid source hash")
+            notebook_id = entry.get("notebook_id")
+            notebook_url = entry.get("notebook_url")
+            if not isinstance(notebook_id, str) or not re.fullmatch(r"[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}", notebook_id):
+                errors.append(name + ": invalid NotebookLM ID")
+            expected_url = "https://notebooklm.google.com/notebook/" + str(notebook_id)
+            if not isinstance(notebook_url, str) or notebook_url != expected_url:
+                errors.append(name + ": NotebookLM link does not match its ID")
+            if entry.get("notebook_catalog") != "docs/notebooklm-inventory.md":
+                errors.append(name + ": missing NotebookLM catalog reference")
             if name not in index or name not in router:
                 errors.append(name + ": not indexed in both entry points")
             content = path.read_text()
-            for required in ("Stage and host scope", "## Worked application", "**Activate:**", "**Defer:**"):
+            for required in ("Stage and host scope", "## Worked application", "## NotebookLM source and follow-up", "**Activate:**", "**Defer:**"):
                 if required not in content:
                     errors.append(name + ": missing " + required)
+            if not isinstance(notebook_id, str) or notebook_id not in content or not isinstance(notebook_url, str) or notebook_url not in content:
+                errors.append(name + ": card NotebookLM source does not match the manifest")
     except (OSError, ValueError, KeyError, TypeError) as error:
         errors.append("card manifest: " + str(error))
     return errors
@@ -115,6 +126,10 @@ def validate_repo(root=ROOT):
     for phrase in ("Stage 2:", "Independent lanes", "One integrator", "Standalone council", "HARD_STOP"):
         if phrase not in workflow:
             errors.append("workflow: missing " + phrase)
+    guide = (root / "heroes/how-to-use.md").read_text()
+    for phrase in ("Query a hero's NotebookLM source", "ask_question", "session_id", "sanitized", "supporting notebook sources"):
+        if phrase not in guide:
+            errors.append("hero query guide: missing " + phrase)
     return errors
 
 

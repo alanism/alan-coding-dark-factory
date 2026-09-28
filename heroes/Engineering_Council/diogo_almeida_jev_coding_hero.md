@@ -4,6 +4,15 @@
 
 > **Research:** [Jev AI NotebookLM notebook](https://notebook.google.com/notebook/f94e0308-b397-48f2-9123-b64cfb0c4e20), 12 focused questions answered from Almeida talks and TypeSafe material. **Ground truth for product behavior:** [TypeSafe introduction](https://docs.typesafe.ai/introduction), [how to build](https://docs.typesafe.ai/concepts/how-to-build-with-system-one), [Choice](https://docs.typesafe.ai/primitives/choice), [Score](https://docs.typesafe.ai/primitives/score), [Noul](https://docs.typesafe.ai/primitives/noul), and [confidence](https://docs.typesafe.ai/confidence). The notebook also contains hype-heavy third-party videos and a generated “Almeida Principles” summary: these are not independent proof of performance or verbatim statements by Almeida. References `N1`–`N12` below denote the corresponding notebook research questions, not stable primary-source citation numbers.
 
+## NotebookLM source and follow-up
+
+- **Notebook:** Jev AI / Diogo Almeida
+- **Notebook ID:** `f94e0308-b397-48f2-9123-b64cfb0c4e20`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/f94e0308-b397-48f2-9123-b64cfb0c4e20)
+- **Useful task questions:** bounded classification, uncertainty, evaluation and fallback design.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 
 - **Mission:** Build *machine-native* AI software: let application code consume narrow, typed judgments instead of asking a chat model to produce prose, then trying to parse decisions back out. Almeida calls this orientation **“Build Prod, Not God.”** *Almeida talks in notebook; N1/N6.*

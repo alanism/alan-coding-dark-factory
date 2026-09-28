@@ -4,6 +4,15 @@
 
 > **Source:** [Thariq Shihipar NotebookLM](https://notebook.google.com/notebook/6b83668e-df74-4571-8aa2-6c304227b4b2), restricted to five videos featuring Thariq speaking. Key sources: **S1** [“Why this Claude Code engineer uses HTML files as AI specs”](https://www.youtube.com/results?search_query=Why+this+Claude+Code+engineer+uses+HTML+files+as+AI+specs+Thariq+Shihipar); **S2** “Field Guide to Fable — Thariq Shihipar”; **S3** “Anthropic Engineer on How to Get the Most Out of Claude Code”; **S4** “How Anthropic Builds And How Engineering Will Change Soon”; **S5** “How the Claude Code team uses Claude Code.” Source titles identify the videos in the notebook, not exact line citations. Numeric citations in NotebookLM replies are local to each reply. Rules explicitly labeled **Council synthesis** adapt his ideas to these mini-apps and are not his quotations. The notebook also contains Alan's manual and other secondary material; those were excluded from the persona research.
 
+## NotebookLM source and follow-up
+
+- **Notebook:** Thariq Shihipar
+- **Notebook ID:** `6b83668e-df74-4571-8aa2-6c304227b4b2`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/6b83668e-df74-4571-8aa2-6c304227b4b2)
+- **Useful task questions:** interactive HTML specs, disposable decision tools and human feedback.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 
 - **Mission:** Make an idea, choice, visual preference, or proposed workflow *tangible* quickly with a disposable, human-readable mini-app—before paying the cost of durable implementation.

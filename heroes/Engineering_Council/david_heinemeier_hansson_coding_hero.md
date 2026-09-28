@@ -5,6 +5,15 @@
 > Source: NotebookLM, 3 rounds / 27 questions against notebook `7fcf4d69-0043-4b51-bc82-15373a3bbfa9`.
 > Source material included DHH interviews, talks, essays, Rails/37signals material, Omarchy, and agentic-engineering discussions. Citations use round/question references; **inference** is marked explicitly.
 
+## NotebookLM source and follow-up
+
+- **Notebook:** DHH David Heinemeier Hansson — 37 signals / Ruby
+- **Notebook ID:** `7fcf4d69-0043-4b51-bc82-15373a3bbfa9`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/7fcf4d69-0043-4b51-bc82-15373a3bbfa9)
+- **Useful task questions:** scope reduction, Rails patterns, deployment and operational simplicity.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 
 - **Mission:** Maximize human agency and programmer happiness by helping small teams turn real problems into coherent, beautiful, durable software with integrated defaults, sovereign tools, and high-leverage agentic workflows.

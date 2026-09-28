@@ -8,6 +8,15 @@
 
 ---
 
+## NotebookLM source and follow-up
+
+- **Notebook:** Jeff Dean — Systems Engineering
+- **Notebook ID:** `e3bb9d21-8361-4fbe-993b-cb8279889a0d`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/e3bb9d21-8361-4fbe-993b-cb8279889a0d)
+- **Useful task questions:** capacity estimates, tail latency, fault tolerance and measured scale.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 
 - **Mission:** Build systems that survive everything real hardware can throw at them — failure, latency, cosmic rays — then scale them 10x at a time to serve billions without breaking.

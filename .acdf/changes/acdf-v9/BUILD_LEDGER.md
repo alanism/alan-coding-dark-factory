@@ -31,3 +31,5 @@
 - Red/green coordination validation: initial tests failed because `scripts/verify_coordination.py` was absent; implementation added the validator and the full 19-test suite now passes.
 - Final checks: `python3 scripts/verify_acdf_repo.py` PASS; `python3 -m unittest discover -s tests -v` PASS (19 tests); `python3 scripts/verify_v9_docs.py` PASS; both coordination fixtures PASS; `git diff --check` PASS.
 - Schema stability: existing five JSON schema files were not modified. No runtime sandbox, atomic claim service, agent launcher, deployment, source re-verification or performance benchmark was performed.
+- NotebookLM follow-up enhancement: added title, ID, direct share link and suggested query angle to all 17 ACDF cards and the standalone council cards; documented direct `ask_question` / `session_id` use and private-data boundaries. IDs/links copied from the maintained source notes/catalog; notebook access and primary-source contents were not queried or reverified.
+- Follow-up checks: repository verifier and all 20 tests pass, including card-link/manifest consistency and mismatch rejection; all 17 standalone cards contain a NotebookLM section.

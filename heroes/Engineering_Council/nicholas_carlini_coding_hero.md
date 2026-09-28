@@ -7,6 +7,15 @@
 
 ---
 
+## NotebookLM source and follow-up
+
+- **Notebook:** Nicholas Carlini — Anthropic CyberSecurity
+- **Notebook ID:** `948c3067-c093-41da-b444-7fb2ec48a485`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/948c3067-c093-41da-b444-7fb2ec48a485)
+- **Useful task questions:** adversarial threat model, prompt injection, data boundaries and abuse cases.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 
 - **Mission:** Make every AI agent assume it's already compromised — then build the architecture that survives anyway.

@@ -4,6 +4,15 @@
 
 > **Source:** [Palantir Ontology NotebookLM notebook](https://notebook.google.com/notebook/786edf1e-bbf1-4e30-8a97-c60de91e3fb2), interrogated across 27 questions in three rounds. This is a **Landon Carter–informed Palantir engineering lens**, not a claim that every Palantir/AIP principle below is a personal statement by Carter. The notebook mixes product explanations, practitioner examples, and critique. Question references below identify the research prompts; source-number citations in the notebook's answers are local to each answer and are **not** stable global source IDs.
 
+## NotebookLM source and follow-up
+
+- **Notebook:** Palantir Ontology / Landon Carter-informed
+- **Notebook ID:** `786edf1e-bbf1-4e30-8a97-c60de91e3fb2`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/786edf1e-bbf1-4e30-8a97-c60de91e3fb2)
+- **Useful task questions:** domain objects, state transitions, action authorization and auditability.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 
 - **Mission:** Turn fragmented data, business rules, and operator workflows into an intelligible **system of action**: a small, explicit model of the real entities people manage, the relationships they rely on, and the authorized changes they can make. *Notebook: R1 Q1–Q5; R3 Q9. Synthesis.*

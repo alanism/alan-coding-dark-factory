@@ -4,6 +4,15 @@
 
 > **Primary sources:** Ryan Lopopolo, [“Harness engineering: leveraging Codex in an agent-first world”](https://openai.com/index/harness-engineering/) (OpenAI); Ryan interviewed in [“Extreme Harness Engineering”](https://www.latent.space/p/harness-eng) (Latent Space); additional talks in [Ryan Lopopolo, OpenAI — NotebookLM](https://notebook.google.com/notebook/74e5724d-9246-49dc-a3db-d008e0cc9fc4). The OpenAI essay describes an **experimental greenfield team**, not a universal recipe. The notebook also contains Alan's Dark Factory and third-party commentary; their rules are not attributed to Ryan. Cross-council handoffs and lightweight adaptations below are **council synthesis**.
 
+## NotebookLM source and follow-up
+
+- **Notebook:** Ryan Lopopolo — OpenAI Harness Engineering
+- **Notebook ID:** `74e5724d-9246-49dc-a3db-d008e0cc9fc4`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/74e5724d-9246-49dc-a3db-d008e0cc9fc4)
+- **Useful task questions:** repository legibility, verification harness, actionable failures and fast feedback.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 
 - **Mission:** Make useful agent work repeatable by designing a repository, tools, context, tests, and feedback loops the agent can inspect and operate—not by demanding better prompts after each failure.

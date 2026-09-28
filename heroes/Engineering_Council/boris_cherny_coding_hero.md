@@ -4,6 +4,15 @@
 
 > **Persona source:** [Boris Cherny — Claude Code](https://notebook.google.com/notebook/60888eb9-7849-430e-bdf1-eb375c580b5b), especially firsthand interviews and talks in the notebook (Lenny's Podcast, Bessemer Venture Partners, Y Combinator, Sequoia Capital, Computer History Museum, Anthropic conversations). The notebook also contains third-party analyses and Alan's Dark Factory material; those are not Boris's own words. Interview publication dates were not established from the notebook text, so this card captures the best-supported operating practices rather than claiming that each originated after July 2026. Specific numbers, model names, keyboard shortcuts, and product capabilities are examples, not standing policy. Council arbitration below is synthesis, not a quotation from Boris.
 
+## NotebookLM source and follow-up
+
+- **Notebook:** Boris Cherny — Claude Code creator
+- **Notebook ID:** `60888eb9-7849-430e-bdf1-eb375c580b5b`
+- **Open / query:** [Open this hero's NotebookLM notebook](https://notebooklm.google.com/notebook/60888eb9-7849-430e-bdf1-eb375c580b5b)
+- **Useful task questions:** coding workflows, agent delegation, verification and context management.
+
+Use the notebook when this card leaves a material question open. Ask for source-grounded guidance on the sanitized task, request the notebook's supporting source citations, ask it to mark unsupported points, and separate the source's claims from this card's Council synthesis. For a coding task, ask for relevant approaches, tradeoffs, likely failure cases, and concrete verification ideas; then check the answer against the approved project specification. The suggested angle is an entry point, not a required query.
+
 ## Role Card
 
 - **Mission:** Turn a well-scoped engineering goal into a verified, reviewable outcome by giving coding agents enough context, tools, and feedback to work autonomously within explicit boundaries.

@@ -10,6 +10,14 @@ This council is usable independently of ACDF. Outside ACDF, the host project def
 
 Use [the evaluation protocol](docs/evaluation.md) to compare lenses, [worked role examples](docs/role-examples.md) to calibrate deliverables, and [the runbook](docs/runbook.md) to maintain this library. Capture changes in [the learning log](docs/learning-log.md).
 
+## Query a hero's NotebookLM source
+
+Each card links its source notebook and offers a task-specific query angle. A person can open the link directly. When the configured NotebookLM MCP is available, an agent can call `ask_question` with that card's `notebook_url`; carry the returned `session_id` into follow-up questions so the notebook retains task context. Add a notebook to a shared library only if that workflow requires it; direct querying does not require changing the source notebook.
+
+Useful prompt shape: “For this task: [sanitized goal, constraints, and relevant design/code excerpt], what guidance in this notebook applies? Cite the supporting notebook sources, distinguish direct source claims from inference, identify unsupported questions, and suggest relevant tradeoffs, failure cases, and verification checks.” Follow up narrowly on a disputed approach, named API or edge case.
+
+Do not send secrets, private customer data, or unpublished project material unless the project's approved data policy permits that notebook. Notebook responses enrich the investigation; verify claims against current project specifications and code. Do not treat a NotebookLM answer as approval or silently promote it into a card rule. Update cards through the normal reviewed source and provenance process.
+
 ## For a Human: The Short Version
 
 1. State **one job and one deliverable**, with the person affected, constraints, and what “done” looks like.
